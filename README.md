@@ -1,5 +1,5 @@
-# Welcome to GitHub Desktop!
+# Creative Agency Website
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
-
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+> Simple HTML/CSS website from the [YouTube tutorial project](https://www.youtube.com/watch?v=lvYnfMOUOJY&t=274s)
+![Creative Agency](/images/screenshot.png 'Creative Agency')
+[LIVE PREVIEW](https://raw.githack.com/bradtraversy/creative-agency-website/master/index.html)
