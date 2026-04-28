@@ -18,7 +18,7 @@
 html,
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0a0707;
+  background: #111111;
   color: #ffffff;
 }
 
@@ -74,7 +74,7 @@ h5 {
   justify-content: center;
   color: #ffffff; 
   font-family: Mohave;
-  font-size: 180px;
+  font-size: 130px;
   font-style: normal;
   line-height: normal;
   
@@ -91,9 +91,9 @@ h6 {
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 20px 0 10px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 section {
@@ -584,9 +584,9 @@ img {vertical-align: middle;}
 
 .contact-info {
   width: 1150px;
-  height: 470px;
+  height: auto;
   background: #efe9e9;
-  padding: 60px 40px 20px;
+  padding: 60px 40px 40px;
   a:hover { text-decoration: underline; }
 }
 
@@ -595,7 +595,7 @@ img {vertical-align: middle;}
   align-items: flex-start;
   margin-bottom: 40px;
   margin-top: 40px;
-  margin-left: 50px;
+  margin-left: 0;
 }
 
 .contact-info .info-box .contact-icon {
@@ -615,10 +615,11 @@ img {vertical-align: middle;}
 
 .contact-img {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
+  bottom: 60px;
+  right: 70px;
+  height: auto;
+  width: 25%;
+  max-width: 450px;
   border-radius: 300px;
 }
 
@@ -646,8 +647,8 @@ img {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: rgb(20, 17, 17); /* Set a background color */
-  color: white; /* Text color */
+  background-color: #181818; /* Set a background color */
+  color: rgb(197, 197, 197); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
    /* Some padding */
   padding-left: 27px;
@@ -660,6 +661,7 @@ img {
 }
 
 #myBtn:hover {
+  color: white;
   background-color: #363434; /* Add a dark-grey background on hover */
 }
 
