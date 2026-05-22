@@ -40,11 +40,12 @@ h1 {
   /*-webkit-text-stroke-width: 7px;
   -webkit-text-stroke-color: #111; */
   font-family: Mohave;
-  font-size: 120px;
+  font-size: 130px;
   font-weight: 1;
   font-style: normal;
-  line-height: 110px;
+  line-height: 130px;
   letter-spacing: 7px;
+  a:hover { text-decoration: underline; }
 }
 
 h2 {
@@ -73,7 +74,7 @@ h4 {
   justify-content: center;
   font-family: 'Antonio', sans-serif;
   font-size: 50px;
-  
+  a:hover { text-decoration: underline; }
 }
 
 h5 {
@@ -350,10 +351,12 @@ header {
 
 /* WORK PAGE */
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
+  display: grid;
+  /* Skapar automatiskt så många kolumner som får plats, minst 300px breda */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .portfolio .item {
@@ -397,10 +400,12 @@ header {
 
 /* PROJECTS UX */
 .project {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
+  display: grid;
+  /* Skapar automatiskt så många kolumner som får plats, minst 300px breda */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .project .item {
@@ -411,8 +416,9 @@ position: relative;
 }
 
 .project .item img {
-  width: auto;
-  height: 650px;
+  width: 100%;
+  height: 600px; /* Sätt en fast höjd om du vill ha dem jämna */
+  object-fit: cover; /* Beskär bilden snyggt istället för att trycka ihop den */
 }
 
 .project .item .action {
@@ -493,11 +499,6 @@ position: relative;
   padding: 5px 15px;
 }
 
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-
-img {vertical-align: middle;}
-
 /* CASE STUDY*/
 .case {
   display: flex;
@@ -540,6 +541,73 @@ img {vertical-align: middle;}
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Centrerar boxen och bilden vertikalt på linjen */
+  gap: 50px;           /* Skapar ett skönt mellanrum mellan boxen och bilden */
+  padding: 100px;
+  margin-top: 60px;
+  min-height: calc(100vh - 110px); /* Tar hänsyn till footers/headers */
+}
+
+/* Vänsterpartiet tar upp flexibelt utrymme */
+.contact-content {
+  flex: 1;
+  max-width: 1300px;
+}
+
+.contact-info {
+  width: 100%; /* Låt den ta upp hela bredden av sin förälder (.contact-content) */
+  background: #efe9e9;
+  padding: 40px;
+  border-radius: 8px; /* Valfritt: ger lite mjukare hörn på boxen */
+  margin-top: 30px;
+}
+
+.contact-info .info-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.contact-info .info-box .contact-icon {
+  width: 50px;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+.contact-info .info-box .details h4 {
+  color: var(--secondary-color);
+}
+
+.contact-info .info-box .details p,
+.contact-info .info-box .details a {
+  color: #111;
+}
+
+.contact-info .info-box:last-child {
+  margin-bottom: 0; /* Tar bort marginal på sista elementet */
+}
+
+/* Högerpartiet för bilden */
+.contact-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* NY RESPONSIV STYLING FÖR BILDEN - Ingen position: absolute längre! */
+.contact-img {
+  position: relative; /* Ändrat från absolute */
+  width: 100%;
+  max-width: 400px;   /* Sätter en maxbredd så den inte blir gigantisk */
+  height: auto;
+  border-radius: 50%; /* Gör bilden helt rund om den är kvadratisk, eller oval */
+  object-fit: cover;
 }
 /*
 .contact-form {
@@ -598,47 +666,6 @@ img {vertical-align: middle;}
   cursor: pointer;
 } 
 */
-
-.contact-info {
-  width: 1150px;
-  height: auto;
-  background: #efe9e9;
-  padding: 60px 40px 40px;
-  a:hover { text-decoration: underline; }
-}
-
-.contact-info .info-box {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  margin-left: 0;
-}
-
-.contact-info .info-box .contact-icon {
-  width: 50px;
-  margin-right: 40px;
-  margin-top: 10px;
-}
-
-.contact-info .info-box .details h4 {
-  color: var(--secondary-color);
-}
-
-.contact-info .info-box .details p,
-.contact-info .info-box .details a {
-  color: #111;
-}
-
-.contact-img {
-  position: absolute;
-  bottom: 40px;
-  right: 70px;
-  height: auto;
-  width: 25%;
-  max-width: 450px;
-  border-radius: 300px;
-}
 
 a {
   color: #ffffff;
@@ -712,6 +739,22 @@ img {
     flex-direction: column;
   }
 
+  /* Ändra riktning från rad till kolumn */
+  .contact-container {
+    flex-direction: column-reverse; /* Lägger bilden överst och texten under på mobil */
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .contact-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-img {
+    max-width: 280px; /* Lite mindre bild på mobilskärmar */
+  }
+
   .contact-form {
     width: 100%;
     padding: 30px 30px 20px;
@@ -735,12 +778,42 @@ img {
 }
 
 @media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+    height: auto; /* Låt sektioner växa med sitt innehåll istället för 100vh */
+  }
+
+  section.home {
+    flex-direction: column-reverse; /* Lägger bilden under eller över texten */
+    justify-content: center;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .home-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    object-fit: cover;
+  }
   .aboutMe {
     grid-template-columns: 1fr;
   }
 
   .aboutMe .service {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 { font-size: 50px; line-height: 55px; }
+  h2 { font-size: 40px; }
+  h3 { font-size: 35px; }
+  h5 { font-size: 3rem; }
+  
+  /* Fixa kontaktkortet för mobil */
+  .contact-info {
+    width: 100%;
+    padding: 20px;
   }
 }
 
