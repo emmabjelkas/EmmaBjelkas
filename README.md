@@ -24,7 +24,7 @@ I'm an UX design student interested in inclusive and accessible design in everyd
 
 # Projects
 My biggest project is my own portfolio! Here you can check out my other project such as redesign concepts, case studies and interaction improvements.
-**-> [(https://emmabjelkas.github.io/EmmaBjelkas/)]**
+**-> [https://emmabjelkas.github.io/EmmaBjelkas/]**
 
 # Contact 
 - LinkedIn: [(https://www.linkedin.com/in/emma-bjelk%C3%A5s-497778252/)]
