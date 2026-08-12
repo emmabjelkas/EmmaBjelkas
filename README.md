@@ -27,5 +27,5 @@ My biggest project is my own portfolio! Here you can check out my other project 
 **-> [https://emmabjelkas.github.io/EmmaBjelkas/]**
 
 # Contact 
-- LinkedIn: [(https://www.linkedin.com/in/emma-bjelk%C3%A5s-497778252/)]
+- LinkedIn: [https://www.linkedin.com/in/emma-bjelk%C3%A5s-497778252/]
 
