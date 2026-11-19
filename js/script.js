@@ -21,9 +21,19 @@
       trigger.setAttribute("aria-expanded", "false");
     }
 
+    // The chevron toggles the menu; the "Projects" word is a normal link to work.html
     trigger.addEventListener("click", function (e) {
       e.preventDefault();
       wrap.classList.contains("is-open") ? close() : open();
+    });
+    // Keyboard: arrow down on the chevron opens the menu and moves into it
+    trigger.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        open();
+        var first = menu.querySelector("a");
+        if (first) first.focus();
+      }
     });
 
     // Hover on devices that can hover

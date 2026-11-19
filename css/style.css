@@ -341,14 +341,29 @@ a:hover .btn--outline {
 .site-nav__link--projects {
   font-weight: 500;
 }
-.site-nav__link--projects::after {
-  right: 20px;
+/* Chevron next to "Projects": opens the dropdown (the word itself links to All projects) */
+.site-nav__chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: -2px;
+  border-radius: 6px;
+  color: inherit;
+  transition: background-color 0.2s;
 }
-.site-nav__link--projects .icon {
+.site-nav__chevron:hover {
+  background: var(--gra-200);
+}
+.site-nav__chevron .icon {
   transition: transform 0.3s var(--ease);
 }
-.has-dropdown.is-open .site-nav__link--projects .icon {
+.has-dropdown.is-open .site-nav__chevron .icon {
   transform: rotate(180deg);
+}
+.site-nav__link--projects[aria-current] + .site-nav__chevron {
+  color: var(--rosa-aktiv);
 }
 
 /* Active page in nav (Figma "Rosa Aktiv – aktiv") */
@@ -364,6 +379,8 @@ a:hover .btn--outline {
 /* Desktop dropdown */
 .has-dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .dropdown {
   position: absolute;
