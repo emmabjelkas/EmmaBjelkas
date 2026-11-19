@@ -106,6 +106,62 @@
   color: var(--rosa-aktiv);
 }
 
+/* Copy-email fallback (for visitors without a default mail app) */
+.contact-ways > li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+.copy-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px 6px 12px;
+  border: 1px solid var(--gra-300);
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--gra-700);
+  background: transparent;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+.copy-email:hover {
+  border-color: var(--brun-aktiv);
+  color: var(--brun-aktiv);
+}
+.copy-email__icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.copy-email__icon--done {
+  display: none;
+}
+.copy-email.is-copied {
+  border-color: var(--oliv-aktiv);
+  background: var(--oliv-hover);
+  color: var(--brun-aktiv);
+}
+.copy-email.is-copied .copy-email__icon--copy {
+  display: none;
+}
+.copy-email.is-copied .copy-email__icon--done {
+  display: block;
+  animation: copy-pop 0.35s var(--ease);
+}
+@keyframes copy-pop {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+}
+
 /* ---------- Form card ---------- */
 .contact-card {
   flex: 1 1 0;
@@ -386,6 +442,12 @@
   .contact-way__value {
     font-size: 16px;
     line-height: 20px;
+  }
+  .contact-ways > li {
+    row-gap: 8px;
+  }
+  .copy-email {
+    margin-left: 56px; /* icon 44 + gap 12: line up under the address */
   }
 
   .contact-card {

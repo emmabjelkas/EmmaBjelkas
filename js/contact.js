@@ -166,3 +166,72 @@
     form.elements.name.focus();
   });
 })();
+
+/* Copy-email button – fallback for visitors whose computer has no
+   default mail app (then the mailto: link silently does nothing). */
+(function () {
+  "use strict";
+
+  var btn = document.querySelector(".copy-email");
+  if (!btn) return;
+  var label = btn.querySelector(".copy-email__text");
+  var status = document.getElementById("copy-email-status");
+  var resetTimer;
+
+  function fallbackCopy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch (e) {}
+    document.body.removeChild(ta);
+    return ok ? Promise.resolve() : Promise.reject();
+  }
+
+  function copy(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).catch(function () {
+        return fallbackCopy(text);
+      });
+    }
+    return fallbackCopy(text);
+  }
+
+  function show(ok) {
+    clearTimeout(resetTimer);
+    btn.classList.toggle("is-copied", ok);
+    label.textContent = ok ? "Copied!" : "Press Ctrl+C";
+    if (status) status.textContent = ok ? "Email address copied to clipboard" : "Couldn't copy – select the address and copy it manually";
+    resetTimer = setTimeout(function () {
+      btn.classList.remove("is-copied");
+      label.textContent = "Copy";
+      if (status) status.textContent = "";
+    }, 2500);
+  }
+
+  btn.addEventListener("click", function () {
+    copy(btn.getAttribute("data-copy")).then(
+      function () {
+        show(true);
+      },
+      function () {
+        // Select the visible address so the visitor can copy it by hand
+        var value = btn.parentNode.querySelector(".contact-way__value");
+        if (value && window.getSelection) {
+          var range = document.createRange();
+          range.selectNodeContents(value);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+        show(false);
+      }
+    );
+  });
+})();
