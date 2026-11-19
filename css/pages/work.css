@@ -24,7 +24,7 @@
   display: none;
 }
 .work-item {
-  border-top: 1px solid var(--gra-300);
+  border-bottom: 1px solid var(--gra-300);
 }
 
 /* Row layout differs from the home page: cover always left, fixed 560×400 */
@@ -287,12 +287,7 @@
     gap: 28px;
   }
   .work-item {
-    border-top: 0;
-  }
-  /* divider between visible items only */
-  .work-item:not([hidden]) ~ .work-item:not([hidden]) {
-    border-top: 1px solid var(--gra-300);
-    padding-top: 28px;
+    padding-bottom: 28px;
   }
   .work-project.project,
   .work-project.project--reverse {
