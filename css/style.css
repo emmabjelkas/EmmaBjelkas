@@ -1075,30 +1075,23 @@ a:hover .cover__layer--c,
   height: 74.17%;
 }
 
-/* Stallbacken */
+/* Stallbacken – the redesigned start page in a browser-style window */
 .cover--stallbacken {
   background: #2d4a6b;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
 }
-.cover--stallbacken .cs-title {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 16.67cqw;
-  line-height: 0.9;
-  margin-top: -2cqw;
+.cover--stallbacken .sb-shot {
+  left: 9%;
+  top: 11%;
+  width: 82%;
+  height: 100%;
+  border-radius: 1.25cqw 1.25cqw 0 0;
+  overflow: hidden;
+  background: #f1f0eb;
+  box-shadow: 0 1.67cqw 4.44cqw rgba(13, 20, 38, 0.35);
 }
-.cover--stallbacken .cs-sub {
-  margin-top: 1.5cqw;
-  font-family: var(--sans);
-  font-weight: 500;
-  font-size: 2.22cqw;
-  letter-spacing: 0.24em;
-  color: #c8a7ba;
+.cover--stallbacken .sb-shot img {
+  object-fit: cover;
+  object-position: top center;
 }
 
 /* ---------- Reveal-on-scroll ---------- */

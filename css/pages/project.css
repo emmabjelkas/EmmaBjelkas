@@ -723,29 +723,10 @@
   height: 59.12%;
 }
 
-/* Stallbacken next-cover (typographic) */
-.next-project__cover .cover--stallbacken {
-  gap: 8px;
-}
-.next-project__cover .cover--stallbacken .cs-title {
-  font-size: 88px;
-  line-height: 108px;
-  margin-top: 0;
-}
-.next-project__cover .cover--stallbacken .cs-sub {
-  margin-top: 0;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 3.84px;
-}
 
 @media (max-width: 1100px) and (min-width: 901px) {
   .next-project__cover {
     flex-basis: 420px;
-  }
-  .next-project__cover .cover--stallbacken .cs-title {
-    font-size: 72px;
-    line-height: 84px;
   }
 }
 @media (max-width: 900px) {
@@ -778,15 +759,124 @@
   .next-project__cover .cover {
     aspect-ratio: 342 / 220;
   }
-  .next-project__cover .cover--stallbacken .cs-title {
-    font-size: 80px;
-    line-height: 80px;
-  }
 }
 
 /* ---------- Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   .screen:hover .screen__img {
     transform: none;
+  }
+}
+
+/* ---------- Project facts (type / role / team) ---------- */
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 220px));
+  gap: 16px 48px;
+  margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--gra-300);
+  width: 100%;
+  max-width: 820px;
+}
+.project-facts dt {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--rosa-aktiv);
+}
+.project-facts dd {
+  margin: 6px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--brun-aktiv);
+}
+
+/* ---------- Problem cards (3 across) ---------- */
+.steps--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.step__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+/* ---------- Validation note: what's measured vs. not yet tested ---------- */
+.validate {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 32px;
+  border: 1.5px dashed var(--gra-400);
+  border-radius: 16px;
+}
+.validate__label {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: var(--gra-200);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--gra-700);
+}
+.validate ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 20px;
+  list-style: disc;
+}
+.validate li::marker {
+  color: var(--rosa-aktiv);
+}
+.label-measured {
+  background: var(--oliv-hover);
+  color: var(--brun-aktiv);
+}
+
+@media (max-width: 900px) {
+  .project-facts {
+    order: 5;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+    padding-top: 20px;
+  }
+  .project-facts dd {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .steps--3 {
+    grid-template-columns: 1fr;
+  }
+  .step__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .validate {
+    padding: 20px;
+  }
+}
+
+/* Short note above a screens grid, explaining what to look for */
+.screens__note {
+  max-width: 720px;
+  margin-top: -24px;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--gra-700);
+}
+@media (max-width: 900px) {
+  .screens__note {
+    margin-top: -16px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }

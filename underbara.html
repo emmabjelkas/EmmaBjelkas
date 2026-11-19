@@ -33,9 +33,9 @@
             </button>
             <div class="dropdown" id="projects-dropdown">
               <a href="refino.html">Refino – Website &amp; Loan Application</a>
-              <a href="equestrian.html">Equestrian Management App</a>
               <a href="underbara.html">Underbara Unge – Redesign</a>
               <a href="casestudy.html">Case Study – Stallbacken</a>
+              <a href="equestrian.html">Equestrian Management App</a>
               <hr />
               <a href="art.html">Graphic Art</a>
               <a class="textlink textlink--pink" href="work.html">
@@ -62,9 +62,9 @@
           <div class="mobile-menu__sub" id="mobile-menu-projects">
             <ul>
               <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
-              <li><a href="equestrian.html">Equestrian Management App</a></li>
               <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
               <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
               <li><a href="art.html">Graphic Art</a></li>
               <li>
                 <a class="textlink textlink--pink" href="work.html">
@@ -93,6 +93,11 @@
             A school redesign of a memory-book app for parents, combining user-centred research with strict requirements
             for accessibility and sustainability.
           </p>
+          <dl class="project-facts">
+            <div><dt>Type</dt><dd>School project</dd></div>
+            <div><dt>My role</dt><dd>UX/UI designer</dd></div>
+            <div><dt>Team</dt><dd>Me and five other UX students</dd></div>
+          </dl>
         </div>
       </section>
 
@@ -113,7 +118,7 @@
           <header class="p-section__head"><p class="p-section__num">01</p><h2 class="p-section__title" id="s-project">The project</h2></header>
           <div class="p-section__content">
             <p>
-              This is a school project where the goal was to redesign and improve an already existing service, by
+              A school project where six of us UX students redesigned and improved an already existing service, by
               combining user-centred research with strict requirements for accessibility and sustainability.
             </p>
             <p>The mobile app Underbara Unge is made for parents to create a personal memory book of their child's first year.</p>
@@ -121,16 +126,55 @@
         </div>
       </section>
 
-      <!-- 02 The solution -->
-      <section class="p-section reveal" aria-labelledby="s-solution">
+      <!-- 02 The problem -->
+      <section class="p-section reveal" aria-labelledby="s-problem">
         <div class="container p-section__inner">
-          <header class="p-section__head"><p class="p-section__num">02</p><h2 class="p-section__title" id="s-solution">The solution</h2></header>
+          <header class="p-section__head"><p class="p-section__num">02</p><h2 class="p-section__title" id="s-problem">The problem</h2></header>
           <div class="p-section__content">
             <p>
-              The final design lowers the threshold for the user with flexible steps and motivational progression. These
-              improvements create a more inclusive and undemanding experience that better supports the user's everyday
-              life and increases the likelihood that the book will be completed.
+              Parents start the memory book with lots of energy, but the old app made it hard to keep going through the
+              whole first year. We found three main problems:
             </p>
+            <div class="steps steps--3">
+              <div class="step">
+                <p class="step__num">01</p>
+                <p class="step__title">Motivation faded</p>
+                <p>Users' motivation dropped over time, and many books were left unfinished.</p>
+              </div>
+              <div class="step">
+                <p class="step__num">02</p>
+                <p class="step__title">Overwhelming texts</p>
+                <p>Long instructions and prompts could feel like too much for tired new parents.</p>
+              </div>
+              <div class="step">
+                <p class="step__num">03</p>
+                <p class="step__title">No visible progress</p>
+                <p>Users couldn't see how far they had come or what was left.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 The solution -->
+      <section class="p-section reveal" aria-labelledby="s-solution">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">03</p><h2 class="p-section__title" id="s-solution">The solution</h2></header>
+          <div class="p-section__content">
+            <p>
+              The final design answers each problem: flexible steps so parents can fill in the book at their own pace,
+              shorter texts that are easier to take in, and motivational progression that shows how far they have come.
+              The aim is a more inclusive and undemanding experience that fits into everyday life – so that more books
+              get finished.
+            </p>
+            <div class="validate">
+              <p class="validate__label">Not yet tested</p>
+              <p>Whether more books actually get finished is a hypothesis. To find out, I would:</p>
+              <ul>
+                <li>Let 5–6 parents try the old and the new month page and ask them to add a memory – comparing time, mistakes and how they felt.</li>
+                <li>Track how many users still add memories after 1, 3 and 6 months, before and after the redesign.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -155,6 +199,10 @@
             <h2 class="screens__title" id="s-old">Old design</h2>
             <p class="screens__count">7 screens</p>
           </div>
+          <p class="screens__note">
+            What to look for: dense blocks of text, no sense of how much of the book is done, and colours that fail
+            WCAG AA contrast.
+          </p>
           <div class="screens__grid screens__grid--tight">
             <figure class="screen">
               <div class="screen__img"><img src="assets/img/underbara/old-1.png" alt="Old design: onboarding screen with the logo and an explanation of how the app works" width="380" height="828" loading="lazy" /></div>
@@ -195,6 +243,10 @@
             <h2 class="screens__title" id="s-new">New design</h2>
             <p class="screens__count">7 screens</p>
           </div>
+          <p class="screens__note">
+            What changed: shorter texts split into smaller steps, progress shown on the overview and month pages, and a
+            new colour scheme that passes WCAG AA.
+          </p>
           <div class="screens__grid screens__grid--tight">
             <figure class="screen">
               <div class="screen__img"><img src="assets/img/underbara/new-log-in.png" alt="New design: log-in screen with the logo and a guest option" width="406" height="885" loading="lazy" /></div>
@@ -241,9 +293,7 @@
               </div>
             </div>
             <a class="next-project__cover" href="casestudy.html" tabindex="-1" aria-hidden="true">
-              <div class="cover cover--stallbacken">
-                <p class="cs-title">Case<br />study</p>
-                <p class="cs-sub">STALLBACKEN</p>
+              <div class="cover cover--stallbacken"><div class="cover__layer cover__layer--a sb-shot"><img src="assets/img/stallbacken/redesign-mockup.jpg" alt="" loading="lazy" /></div>
               </div>
             </a>
           </div>

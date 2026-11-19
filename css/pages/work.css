@@ -137,19 +137,6 @@
   width: 19.48%;
   height: 54.09%;
 }
-.work-project .cover--stallbacken {
-  gap: 1.79cqw;
-}
-.work-project .cover--stallbacken .cs-title {
-  font-size: 21.43cqw;
-  line-height: 19.29cqw;
-  margin-top: 0;
-}
-.work-project .cover--stallbacken .cs-sub {
-  margin-top: 0;
-  font-size: 2.86cqw;
-  line-height: 3.57cqw;
-}
 
 /* ---------- Filter animation ---------- */
 .work-item.is-entering {
@@ -387,17 +374,6 @@
     top: 38.42%;
     width: 23.72%;
     height: 54.09%;
-  }
-  .work-project .cover--stallbacken {
-    gap: 2.32cqw;
-  }
-  .work-project .cover--stallbacken .cs-title {
-    font-size: 25.51cqw;
-    line-height: 31.3cqw;
-  }
-  .work-project .cover--stallbacken .cs-sub {
-    font-size: 4.64cqw;
-    line-height: 5.8cqw;
   }
 
   .art-teaser__inner {

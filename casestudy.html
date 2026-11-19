@@ -35,9 +35,9 @@
             </button>
             <div class="dropdown" id="projects-dropdown">
               <a href="refino.html">Refino – Website &amp; Loan Application</a>
-              <a href="equestrian.html">Equestrian Management App</a>
               <a href="underbara.html">Underbara Unge – Redesign</a>
               <a href="casestudy.html">Case Study – Stallbacken</a>
+              <a href="equestrian.html">Equestrian Management App</a>
               <hr />
               <a href="art.html">Graphic Art</a>
               <a class="textlink textlink--pink" href="work.html">
@@ -64,9 +64,9 @@
           <div class="mobile-menu__sub" id="mobile-menu-projects">
             <ul>
               <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
-              <li><a href="equestrian.html">Equestrian Management App</a></li>
               <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
               <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
               <li><a href="art.html">Graphic Art</a></li>
               <li>
                 <a class="textlink textlink--pink" href="work.html">
@@ -95,6 +95,11 @@
             Re-imagining a well-known equestrian competition website with less cognitive load, clearer hierarchy and
             accessible contrast.
           </p>
+          <dl class="project-facts">
+            <div><dt>Type</dt><dd>Self-initiated concept</dd></div>
+            <div><dt>My role</dt><dd>Research, UX and UI</dd></div>
+            <div><dt>Team</dt><dd>Just me</dd></div>
+          </dl>
         </div>
       </section>
 
@@ -243,15 +248,25 @@
         <div class="container p-section__inner">
           <header class="p-section__head"><p class="p-section__num">08</p><h2 class="p-section__title" id="s-impact">Impact</h2></header>
           <div class="p-section__content">
-            <p>
-              By going from a dense layout to a structured, WCAG-compliant design, the redesign achieves its core goals.
-              The new colour palette moves from a failing 2.84:1 ratio to the 4.5:1 AA standard, so the site is usable for
-              equestrians with visual impairments.
-            </p>
-            <p>
-              By moving secondary information to dedicated sub-pages and using white space, the time it takes to find
-              competition rules is significantly reduced.
-            </p>
+            <div class="validate">
+              <p class="validate__label label-measured">Measured</p>
+              <p>
+                The new colour palette moves the text contrast from a failing 2.84:1 to at least 4.5:1, which passes WCAG
+                AA for normal text. That makes the text easier to read for more people, including riders with low vision.
+              </p>
+            </div>
+            <div class="validate">
+              <p class="validate__label">Not yet tested</p>
+              <p>
+                Moving secondary information to its own pages and adding white space should make competition rules
+                quicker to find – but this is a hypothesis. To test it, I would:
+              </p>
+              <ul>
+                <li>Give 5 riders the same tasks on the old and the new design, e.g. “Find the rules for a dressage class”.</li>
+                <li>Compare how many succeed, how long it takes and where they get stuck.</li>
+                <li>Check the design with a screen reader and with users who have low vision.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -262,16 +277,17 @@
           <div class="next-project__row">
             <div class="next-project__text">
               <p class="next-project__label">Next project</p>
-              <h2 class="next-project__title" id="next-title">Refino – Website &amp; Loan Application</h2>
+              <h2 class="next-project__title" id="next-title">Equestrian Management App</h2>
               <div class="next-project__links">
-                <a class="textlink" href="refino.html">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></a>
+                <a class="textlink" href="equestrian.html">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></a>
                 <a class="textlink textlink--grey" href="work.html"><svg class="icon icon--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.67 8H3.33M7.33 3.33L3.33 8L7.33 12.67" /></svg> All projects</a>
               </div>
             </div>
-            <a class="next-project__cover" href="refino.html" tabindex="-1" aria-hidden="true">
-              <div class="cover cover--refino">
-                <div class="cover__layer cover__layer--a refino-desktop"><img src="assets/img/refino-desktop.png" alt="" loading="lazy" /></div>
-                <div class="cover__layer cover__layer--b refino-mobile"><img src="assets/img/refino-mobile.png" alt="" loading="lazy" /></div>
+            <a class="next-project__cover" href="equestrian.html" tabindex="-1" aria-hidden="true">
+              <div class="cover next-cover--equestrian">
+                <div class="cover__layer cover__layer--a ne-3"><img src="assets/img/equestrian-mockup-3.png" alt="" loading="lazy" /></div>
+                <div class="cover__layer cover__layer--c ne-2"><img src="assets/img/equestrian-mockup-2.png" alt="" loading="lazy" /></div>
+                <div class="cover__layer cover__layer--b ne-1"><img src="assets/img/equestrian-mockup-1.png" alt="" loading="lazy" /></div>
               </div>
             </a>
           </div>
