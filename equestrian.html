@@ -2,100 +2,220 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equestrian Management App – Emma Bjelkås</title>
+    <meta
+      name="description"
+      content="Case study: an app concept that collects conversations, bookings and planning for horse owners, stable owners and staff in one place."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Equestrian Management app - Emma Bjelkås</title>
+    <link rel="stylesheet" href="css/pages/project.css" />
   </head>
   <body>
-    <header>     
-      <h4><a href="index.html">
-          EMMA BJELKÅS </a>
-        </h4>
-       
-       
-     <span>
-      <h6><a href="contact.html">
-        Contact</a>
-      </h6>
-          </span>
-      </header>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <ul class="breadcrumb">
-         <li><a href="index.html">Start</a></li>
-         <li>/</li>
-         <li><a href="work.html">My Work</a></li>
-         <li>/</li>
-         <li>Equestrian Management App</li>
-        </ul>  
-        
-      <section>
-        <div class="title">
-        <h1>EQUESTRIAN MANAGEMENT APP</h1>
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <button class="site-nav__link site-nav__link--projects" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown">
+              Projects
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <hr />
+              <a href="art.html">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <a class="site-nav__link" href="index.html#about">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="art.html">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="index.html#about">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
-        <p>
-          An idea that arose when I noticed myself keeping up with multiple conversations, bookings and planning accross different platforms. 
-          That's why I wanted to create an app that collected everything in one place. Horse owners, stable owners and employees can access and 
-          review everything from veterinary appointments to contacting other horse owners in the same stable. </br> 
-          The app is still under construction and currently just an idea, the next step in the work process is to conduct field studies, interviews
-          and investigate what the need actually look like!
-          
-        </p>
+    <main id="main">
+      <!-- ============ PROJEKTHUVUD ============ -->
+      <section class="project-hero">
+        <div class="container project-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Start</a><span aria-hidden="true">/</span><a href="work.html">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Equestrian Management App</span></nav>
+          <h1 class="project-hero__title">Equestrian Management App</h1>
+          <div class="project-hero__meta">
+            <p class="project-hero__tags">App concept<span class="sep" aria-hidden="true">|</span>UX/UI design<span class="sep" aria-hidden="true">|</span>Figma</p>
+            <span class="status">In progress</span>
+          </div>
+          <p class="project-hero__intro">
+            An app that collects conversations, bookings and planning for horse owners, stable owners and staff in one
+            place.
+          </p>
         </div>
-
-        <div class="project">
-        <div class="item">
-          <img src="images\eq_start.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_kalender.png" alt="" />
-         </div>  
-         <div class="item">
-          <img src="images\eq_träningar.png" alt="" />
-         </div> 
-         <div class="item">
-          <img src="images\eq_bokade träningar.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_hitta träningar.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_hitta övningar.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_mina stall.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_stall1.png" alt="" />
-         </div>          
-         <div class="item">
-          <img src="images\eq_uppstallade.png" alt="" />
-         </div>
-          <div class="item">
-          <img src="images\eq_profil.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_mina hästar.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_yuki.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_mina bokningar.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\eq_hitta övningar.png" alt="" />
-         </div>
-         
-         
-        </div>
-
       </section>
 
-      <button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
+      <!-- ============ COVER ============ -->
+      <section class="project-cover project-cover--equestrian reveal">
+        <div class="container">
+          <div class="project-cover__frame project-cover__frame--wide">
+            <img src="assets/img/equestrian/cover.jpg" alt="Three screens of the equestrian app – stable overview, home and find trainings – in front of a photo of a horse in a pasture" width="1630" height="921" />
+          </div>
+        </div>
+      </section>
 
-    
+      <!-- 01 The idea -->
+      <section class="p-section reveal" aria-labelledby="s-idea">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">01</p><h2 class="p-section__title" id="s-idea">The idea</h2></header>
+          <div class="p-section__content">
+            <p>
+              An idea that arose when I noticed myself keeping up with multiple conversations, bookings and planning
+              across different platforms. That's why I wanted to create an app that collected everything in one place.
+            </p>
+            <p>
+              Horse owners, stable owners and employees can access and review everything from veterinary appointments to
+              contacting other horse owners in the same stable.
+            </p>
+          </div>
+        </div>
+      </section>
 
-<script src="js/script.js"></script> 
-</body>
-</html>      
+      <!-- 02 Next step -->
+      <section class="p-section reveal" aria-labelledby="s-next-step">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">02</p><h2 class="p-section__title" id="s-next-step">Next step</h2></header>
+          <div class="p-section__content">
+            <p class="callout">
+              The app is still under construction and currently just an idea. The next step in the work process is to
+              conduct field studies, interviews and investigate what the need actually looks like!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screens -->
+      <section class="screens reveal" aria-labelledby="s-screens">
+        <div class="container screens__inner">
+          <div class="screens__heading">
+            <h2 class="screens__title" id="s-screens">Screens</h2>
+            <p class="screens__count">5 screens</p>
+          </div>
+          <div class="screens__grid">
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/equestrian/screen-start.png" alt="Home screen with today's date, weather, today's schedule and notes" width="387" height="841" loading="lazy" /></div>
+              <figcaption>Start</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/equestrian/screen-calendar.png" alt="Calendar screen showing December 2025 and the day's bookings" width="404" height="873" loading="lazy" /></div>
+              <figcaption>Calendar</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/equestrian/screen-find-trainings.png" alt="Find trainings screen with filters for place, discipline and level and a list of suggested trainings" width="406" height="881" loading="lazy" /></div>
+              <figcaption>Find trainings</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/equestrian/screen-stable.png" alt="Stable screen with the daily feeding schedule, a notice board and contacts" width="413" height="898" loading="lazy" /></div>
+              <figcaption>Stable</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/equestrian/screen-profile.png" alt="Profile screen with links to horses, bookings, switch profile and log out" width="399" height="866" loading="lazy" /></div>
+              <figcaption>Profile</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NEXT PROJECT ============ -->
+      <section class="next-project reveal" aria-labelledby="next-title">
+        <div class="container next-project__inner">
+          <div class="next-project__row">
+            <div class="next-project__text">
+              <p class="next-project__label">Next project</p>
+              <h2 class="next-project__title" id="next-title">Underbara Unge – Redesign</h2>
+              <div class="next-project__links">
+                <a class="textlink" href="underbara.html">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></a>
+                <a class="textlink textlink--grey" href="work.html"><svg class="icon icon--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.67 8H3.33M7.33 3.33L3.33 8L7.33 12.67" /></svg> All projects</a>
+              </div>
+            </div>
+            <a class="next-project__cover" href="underbara.html" tabindex="-1" aria-hidden="true">
+              <div class="cover next-cover--underbara">
+                <div class="cover__layer nu-logo"><img src="assets/img/underbara-logo.png" alt="" loading="lazy" /></div>
+                <div class="cover__layer cover__layer--a nu-1"><img src="assets/img/underbara-mockup-1.png" alt="" loading="lazy" /></div>
+                <div class="cover__layer cover__layer--b nu-2"><img src="assets/img/underbara-mockup-2.png" alt="" loading="lazy" /></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
+          </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="index.html#about">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphic art – Emma Bjelkås</title>
+    <meta
+      name="description"
+      content="Graphic art by Emma Bjelkås – digital and traditional portraits of people and horses, and paintings in colour."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages/art.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <button class="site-nav__link site-nav__link--projects" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown" aria-current="true">
+              Projects
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <hr />
+              <a href="art.html" aria-current="page">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <a class="site-nav__link" href="index.html#about">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="art.html" aria-current="page">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="index.html#about">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main id="main">
+      <!-- ============ PAGE HEADER ============ -->
+      <section class="page-header">
+        <div class="container page-header__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Start</a><span aria-hidden="true">/</span><a href="work.html">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Graphic art</span>
+          </nav>
+          <div class="page-header__row">
+            <h1 class="page-header__title">Graphic art</h1>
+            <p class="page-header__intro">Digital and traditional art – portraits of people and horses, and paintings in colour.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GALLERY ============ -->
+      <section class="gallery" aria-label="Artworks">
+        <div class="container">
+          <ul class="gallery__grid">
+            <li class="gallery__item reveal" id="self-portrait">
+              <button class="artwork" type="button" aria-haspopup="dialog" data-alt="Self portrait – digital portrait of Emma with long dark hair and red eyes"
+                data-src="assets/img/art/self-portrait.jpg" data-title="Self portrait" data-type="Digital portrait">
+                <span class="artwork__media">
+                  <span class="artwork__crop artwork__crop--self">
+                    <img src="assets/img/art/self-portrait.jpg" alt="" width="720" height="1280" />
+                  </span>
+                  <span class="artwork__hint" aria-hidden="true"><span class="artwork__hint-desktop">Click to view</span><span class="artwork__hint-mobile">Tap to view</span></span>
+                </span>
+                <span class="artwork__caption">
+                  <span class="artwork__title">Self portrait</span>
+                  <span class="artwork__type">Digital portrait</span>
+                </span>
+              </button>
+            </li>
+            <li class="gallery__item reveal" id="pink-paint">
+              <button class="artwork" type="button" aria-haspopup="dialog" data-alt="Art – Pink Paint – pop-art portrait of a woman with a black bob in pink, purple and yellow"
+                data-src="assets/img/art/pink-paint.png" data-title="Art – Pink Paint" data-type="Digital portrait">
+                <span class="artwork__media">
+                  <span class="artwork__crop artwork__crop--pink">
+                    <img src="assets/img/art/pink-paint.png" alt="" width="2732" height="2048" />
+                  </span>
+                  <span class="artwork__hint" aria-hidden="true"><span class="artwork__hint-desktop">Click to view</span><span class="artwork__hint-mobile">Tap to view</span></span>
+                </span>
+                <span class="artwork__caption">
+                  <span class="artwork__title">Art – Pink Paint</span>
+                  <span class="artwork__type">Digital portrait</span>
+                </span>
+              </button>
+            </li>
+            <li class="gallery__item reveal" id="don-caprillo">
+              <button class="artwork" type="button" aria-haspopup="dialog" data-alt="Horse Portrait – Don Caprillo – a bay horse trotting in front of a green arena fence"
+                data-src="assets/img/art/don-caprillo.png" data-title="Horse Portrait – Don Caprillo" data-type="Digital painting">
+                <span class="artwork__media">
+                  <span class="artwork__crop artwork__crop--olle">
+                    <img src="assets/img/art/don-caprillo.png" alt="" width="4096" height="2896" loading="lazy" />
+                  </span>
+                  <span class="artwork__hint" aria-hidden="true"><span class="artwork__hint-desktop">Click to view</span><span class="artwork__hint-mobile">Tap to view</span></span>
+                </span>
+                <span class="artwork__caption">
+                  <span class="artwork__title">Horse Portrait – Don Caprillo</span>
+                  <span class="artwork__type">Digital painting</span>
+                </span>
+              </button>
+            </li>
+            <li class="gallery__item reveal" id="mr-boo">
+              <button class="artwork" type="button" aria-haspopup="dialog" data-alt="Horse Portrait – Mr Boo – a brown and white pony jumping above the words MR BOO"
+                data-src="assets/img/art/mr-boo.png" data-title="Horse Portrait – Mr Boo" data-type="Digital painting">
+                <span class="artwork__media">
+                  <span class="artwork__crop artwork__crop--boo">
+                    <img src="assets/img/art/mr-boo.png" alt="" width="4096" height="2896" loading="lazy" />
+                  </span>
+                  <span class="artwork__hint" aria-hidden="true"><span class="artwork__hint-desktop">Click to view</span><span class="artwork__hint-mobile">Tap to view</span></span>
+                </span>
+                <span class="artwork__caption">
+                  <span class="artwork__title">Horse Portrait – Mr Boo</span>
+                  <span class="artwork__type">Digital painting</span>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ BACK ============ -->
+      <div class="container art-back">
+        <a class="textlink" href="work.html">
+          <svg class="icon icon--left" viewBox="0 0 17 17" aria-hidden="true"><path d="M13.4583 8.5H3.54167M7.79167 12.75L3.54167 8.5L7.79167 4.25" stroke-width="1.42" /></svg>
+          Back to all projects
+        </a>
+      </div>
+    </main>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+      <div class="lightbox__backdrop" data-lightbox-close aria-hidden="true"></div>
+      <div class="lightbox__panel">
+        <p class="lightbox__count" aria-live="polite"><span data-lightbox-index>1</span> / <span data-lightbox-total>4</span></p>
+        <button class="lightbox__btn lightbox__close" type="button" data-lightbox-close aria-label="Close">
+          <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M7 7L21 21M21 7L7 21" stroke-width="2.17" /></svg>
+        </button>
+        <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous artwork">
+          <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M22.1667 14H5.83333M12.8333 21L5.83333 14L12.8333 7" stroke-width="2.33" /></svg>
+        </button>
+        <div class="lightbox__media">
+          <img class="lightbox__img" alt="" />
+        </div>
+        <button class="lightbox__btn lightbox__next" type="button" aria-label="Next artwork">
+          <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5.83333 14H22.1667M15.1667 7L22.1667 14L15.1667 21" stroke-width="2.33" /></svg>
+        </button>
+        <div class="lightbox__text">
+          <h2 class="lightbox__title" id="lightbox-title"></h2>
+          <p class="lightbox__type"></p>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
+          </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="index.html#about">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/art.js"></script>
+  </body>
+</html>

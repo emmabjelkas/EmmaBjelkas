@@ -1,0 +1,792 @@
+/* =========================================================
+   Case-study pages (refino, equestrian, underbara, casestudy)
+   Shared components: Projekthuvud, cover, text sections,
+   step cards, callout, stat, screens grid, next project.
+   Builds on tokens/helpers in css/style.css.
+   ========================================================= */
+
+/* ---------- Projekthuvud (project header) ---------- */
+.project-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding-top: 80px;
+  padding-bottom: 56px;
+}
+.project-hero__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 88px;
+  line-height: 92px;
+}
+.project-hero__title .nowrap {
+  white-space: nowrap;
+}
+.project-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+}
+.project-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2.24px;
+  text-transform: uppercase;
+  color: var(--rosa-aktiv);
+}
+.project-hero__tags .sep {
+  margin: 0 16px;
+  letter-spacing: 0;
+}
+.project-hero__tags .only-mobile {
+  display: none;
+}
+.project-hero__intro {
+  max-width: 720px;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--gra-700);
+}
+
+/* Status badge ("In progress") */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  background: var(--oliv-hover);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: var(--brun-aktiv);
+  white-space: nowrap;
+}
+.status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--oliv-aktiv);
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .project-hero__title {
+    font-size: 72px;
+    line-height: 78px;
+  }
+}
+@media (max-width: 900px) {
+  .project-hero__inner {
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  /* Mobile order: breadcrumb, tags, title, intro */
+  .project-hero .breadcrumb {
+    order: 1;
+  }
+  .project-hero__meta {
+    order: 2;
+    gap: 8px 16px;
+  }
+  .project-hero__title {
+    order: 3;
+    font-size: 44px;
+    line-height: 46px;
+  }
+  .project-hero__intro {
+    order: 4;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .project-hero__title .nowrap {
+    white-space: normal;
+  }
+  .project-hero__title br {
+    display: none;
+  }
+  .project-hero__tags {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+  }
+  .project-hero__tags .sep {
+    margin: 0 9px;
+  }
+  .project-hero__tags .sep--tight {
+    margin: 0 3px;
+  }
+  .project-hero__tags .only-desktop {
+    display: none;
+  }
+  .project-hero__tags .only-mobile {
+    display: inline;
+  }
+  /* Mobile breadcrumb shows two levels: Start / Projects */
+  .project-hero .breadcrumb > :nth-last-child(-n + 2) {
+    display: none;
+  }
+  .project-hero .breadcrumb a[href="work.html"] {
+    font-weight: 500;
+    color: var(--gra-700);
+  }
+}
+
+/* ---------- Cover section ---------- */
+.project-cover {
+  padding-top: 56px;
+}
+.project-cover__frame {
+  position: relative;
+  max-width: 1284px;
+  margin: 0 auto;
+  border: 2px solid var(--gra-300);
+  border-radius: 16px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.project-cover__frame--wide {
+  max-width: none;
+}
+.project-cover__frame > img,
+.project-cover__frame picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Refino: screenshot inside an inner bordered frame */
+.project-cover--refino .project-cover__frame {
+  aspect-ratio: 1284 / 720;
+}
+.project-cover--refino picture {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--gra-300);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.project-cover--refino picture img {
+  object-position: 50% 100%;
+}
+
+/* Equestrian: full-width photo composite */
+.project-cover--equestrian .project-cover__frame {
+  aspect-ratio: 1630 / 921;
+}
+
+/* Underbara Unge: logo + two phones on brand pink */
+.project-cover--underbara .project-cover__frame {
+  aspect-ratio: 1284 / 624;
+  background: #ad596b;
+}
+.uu-cover__item {
+  position: absolute;
+  transition: transform 0.6s var(--ease);
+}
+.uu-cover__item img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+}
+.uu-cover__logo {
+  left: 11.41%;
+  top: 30.65%;
+  width: 18.71%;
+  height: 38.64%;
+}
+.uu-cover__m1 {
+  left: 42.73%;
+  top: 10%;
+  width: 17.89%;
+  height: 72.58%;
+}
+.uu-cover__m2 {
+  left: 59.77%;
+  top: 21.77%;
+  width: 17.66%;
+  height: 72.42%;
+}
+
+/* Stallbacken: typographic cover */
+.project-cover--stallbacken .project-cover__frame {
+  aspect-ratio: 1284 / 624;
+  background: #2d4a6b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  color: #fff;
+  container-type: inline-size;
+}
+.sb-cover__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: min(120px, 9.4cqw);
+  line-height: 0.9;
+}
+.sb-cover__sub {
+  font-weight: 500;
+  font-size: min(20px, 1.6cqw);
+  line-height: 20px;
+  letter-spacing: 0.24em;
+  color: #c8a7ba;
+}
+
+@media (max-width: 900px) {
+  .project-cover {
+    padding-top: 24px;
+  }
+  .project-cover__frame {
+    max-width: 342px;
+  }
+  .project-cover__frame--wide {
+    max-width: none;
+  }
+  .project-cover--refino .project-cover__frame,
+  .project-cover--underbara .project-cover__frame,
+  .project-cover--stallbacken .project-cover__frame {
+    aspect-ratio: 342 / 300;
+  }
+  .project-cover--refino picture {
+    border: 0;
+    border-radius: 0;
+  }
+  .project-cover--refino picture img {
+    object-position: 50% 0;
+  }
+  .project-cover--equestrian .project-cover__frame {
+    aspect-ratio: 342 / 279;
+  }
+  .project-cover--equestrian img {
+    object-position: 0 50%;
+  }
+  .uu-cover__logo {
+    left: 10.38%;
+    top: 8.67%;
+    width: 33.89%;
+    height: 38.64%;
+  }
+  .uu-cover__m1 {
+    left: 46.93%;
+    top: 28%;
+    width: 25.92%;
+    height: 57.95%;
+  }
+  .uu-cover__m2 {
+    left: 63.6%;
+    top: 34.33%;
+    width: 26.02%;
+    height: 59%;
+  }
+  .project-cover--stallbacken .project-cover__frame {
+    gap: 8px;
+  }
+  .sb-cover__title {
+    font-size: 88px;
+    line-height: 108px;
+  }
+  .sb-cover__title span {
+    display: block;
+  }
+  .sb-cover__sub {
+    font-size: 16px;
+    letter-spacing: 3.84px;
+  }
+}
+
+/* ---------- Text section (Sektionsrubrik + content) ---------- */
+.p-section__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  padding-top: 80px;
+}
+.p-section__head {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+  font-weight: 500;
+}
+.p-section__num {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  color: var(--rosa-aktiv);
+}
+.p-section__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 42px;
+}
+.p-section__content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 20px;
+  line-height: 32px;
+}
+.p-section__sub {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Screenshot figure */
+.shot {
+  position: relative;
+  border: 2px solid var(--gra-300);
+  border-radius: 16px;
+  overflow: hidden;
+  container-type: inline-size;
+}
+.shot img {
+  width: 100%;
+  height: auto;
+}
+.shot--plain {
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+/* phone outline over the Refino desktop+mobile mockup */
+.shot__phone {
+  position: absolute;
+  left: 70.8%;
+  top: 10.94%;
+  width: 24.16%;
+  height: 77.19%;
+  border: 0.53cqw solid #1a1a1a;
+  border-radius: 1.8cqw;
+  filter: drop-shadow(0 12px 16px rgba(13, 20, 38, 0.35));
+  pointer-events: none;
+}
+
+/* Step cards */
+.steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--gra-0);
+}
+.step__num {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  color: var(--rosa-aktiv);
+}
+
+/* Callout */
+.callout {
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--ljusrosa-hover);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .p-section__inner {
+    gap: 48px;
+  }
+  .p-section__head {
+    flex-basis: 240px;
+  }
+}
+@media (max-width: 900px) {
+  .p-section__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding-top: 40px;
+  }
+  .p-section__head {
+    flex: none;
+  }
+  .p-section__title {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .p-section__content {
+    gap: 16px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .p-section__content--loose {
+    gap: 20px;
+  }
+  .p-section__sub {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .shot--crop-m {
+    aspect-ratio: 345 / 280;
+  }
+  .shot--crop-m img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .shot__phone {
+    border-width: 2px;
+    border-radius: 8px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .step__num {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .step p:last-child {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .callout {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* ---------- Stat block ---------- */
+.p-stat__inner {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.p-stat__box {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px;
+  border-radius: 16px;
+  background: var(--brun-aktiv);
+}
+.p-stat__big {
+  flex: none;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 112px;
+  line-height: 124px;
+  color: var(--ljusrosa);
+  white-space: nowrap;
+}
+.p-stat__text {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--gra-300);
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .p-stat__big {
+    font-size: 88px;
+    line-height: 96px;
+  }
+}
+@media (max-width: 900px) {
+  .p-stat__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .p-stat__box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 32px 24px;
+  }
+  .p-stat__big {
+    font-size: 60px;
+    line-height: 66px;
+    white-space: normal;
+  }
+  .p-stat__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+/* ---------- Screens grid ---------- */
+.screens__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 80px;
+}
+.screens__heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.screens__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 42px;
+}
+.screens__count {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.64px;
+  color: var(--gra-700);
+}
+.screens__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* 48px in Figma; shrinks slightly so five cards still fit in one row
+     when a desktop scrollbar eats into the 1512px frame */
+  gap: 40px clamp(24px, calc((100% - 1150px) / 4), 48px);
+}
+.screens__grid--tight {
+  gap: 40px 32px;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.screen__img {
+  width: 230px;
+  height: 497px;
+  border: 3px solid var(--brun-aktiv);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease);
+}
+.screen__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.screen:hover .screen__img {
+  transform: translateY(-4px);
+}
+.screen figcaption {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+  color: var(--gra-700);
+}
+@media (max-width: 900px) {
+  .screens__inner {
+    gap: 24px;
+    padding-top: 40px;
+  }
+  .screens__title {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .screens__grid,
+  .screens__grid--tight {
+    gap: 32px 24px;
+  }
+  .screen__img {
+    width: 159px;
+    height: 342px;
+  }
+  .screen figcaption {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.24px;
+  }
+}
+
+/* ---------- Next project ---------- */
+.next-project__inner {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.next-project__row {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--brun-aktiv);
+}
+.next-project__text {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.next-project__label {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  color: var(--rosa-aktiv);
+}
+.next-project__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 42px;
+}
+.next-project__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.textlink--grey {
+  color: var(--gra-600);
+}
+.textlink--grey .icon {
+  width: 16px;
+  height: 16px;
+}
+.textlink--grey:hover {
+  background-size: calc(100% - 24px) 1px;
+  background-position: 100% 100%;
+}
+.next-project__cover {
+  flex: 0 0 520px;
+  display: block;
+}
+.next-project__cover .cover {
+  aspect-ratio: 520 / 340;
+}
+
+/* Equestrian next-cover (three phones, upright) */
+.next-cover--equestrian {
+  background: #334139;
+}
+.next-cover--equestrian .ne-3 {
+  left: 24.05%;
+  top: 28.96%;
+  width: 18.58%;
+  height: 56.82%;
+}
+.next-cover--equestrian .ne-2 {
+  left: 56.6%;
+  top: 28.96%;
+  width: 18.58%;
+  height: 56.82%;
+}
+.next-cover--equestrian .ne-1 {
+  left: 38.47%;
+  top: 13.05%;
+  width: 22.29%;
+  height: 69.09%;
+}
+
+/* Underbara next-cover */
+.next-cover--underbara {
+  background: #ad596b;
+}
+.next-cover--underbara .nu-logo {
+  left: 11.35%;
+  top: 30.02%;
+  width: 25.26%;
+  height: 38.64%;
+}
+.next-cover--underbara .nu-1 {
+  left: 46.54%;
+  top: 26.49%;
+  width: 19.32%;
+  height: 57.95%;
+}
+.next-cover--underbara .nu-2 {
+  left: 62.12%;
+  top: 33.26%;
+  width: 19.42%;
+  height: 59.12%;
+}
+
+/* Stallbacken next-cover (typographic) */
+.next-project__cover .cover--stallbacken {
+  gap: 8px;
+}
+.next-project__cover .cover--stallbacken .cs-title {
+  font-size: 88px;
+  line-height: 108px;
+  margin-top: 0;
+}
+.next-project__cover .cover--stallbacken .cs-sub {
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 3.84px;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .next-project__cover {
+    flex-basis: 420px;
+  }
+  .next-project__cover .cover--stallbacken .cs-title {
+    font-size: 72px;
+    line-height: 84px;
+  }
+}
+@media (max-width: 900px) {
+  .next-project__inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .next-project__row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding-top: 24px;
+  }
+  .next-project__title {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .next-project__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 32px;
+  }
+  .next-project__cover {
+    flex: none;
+    width: 100%;
+    max-width: 342px;
+    margin: 0 auto;
+  }
+  .next-project__cover .cover {
+    aspect-ratio: 342 / 220;
+  }
+  .next-project__cover .cover--stallbacken .cs-title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+
+/* ---------- Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .screen:hover .screen__img {
+    transform: none;
+  }
+}

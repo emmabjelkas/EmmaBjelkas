@@ -2,70 +2,257 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emma Bjelkås – UX Designer &amp; Graphic Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Emma Bjelkås – UX design student at TUC Yrkeshögskola, focused on user-centred solutions that balance functionality and usability."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Home - Emma Bjelkås</title>
+    <link rel="stylesheet" href="css/pages/home.css" />
   </head>
   <body>
-    <!-- <header>
-      <div class="logo">Emma Bjelkås</div>
-      <div class="toggle"></div>
-      <div class="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutMe.html">About Me</a></li> 
-          <li><a href="work.html">My Work</a></li> 
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="social-bar">
-          <ul>
-            <li>
-              <a href="https://facebook.com">
-                <img src="images/facebook.png" target="_blank" alt="" />
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <button class="site-nav__link site-nav__link--projects" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown">
+              Projects
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <hr />
+              <a href="art.html">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
               </a>
-            </li>
-            <li>
-              <a href="https://twitter.com">
-                <img src="images/twitter.png" target="_blank" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com">
-                <img src="images/instagram.png" target="_blank" alt="" />
-              </a>
-            </li>
-          </ul>
-          <a href="mailto:you@email.com" class="email-icon">
-            <img src="images/email.png" alt="" />
+            </div>
+          </div>
+          <a class="site-nav__link" href="index.html#about">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="art.html">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="index.html#about">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__intro">
+            <p class="hero__eyebrow">EMMA BJELKÅS<br />UX DESIGNER | GRAPHIC DESIGNER</p>
+            <h1 class="hero__title">Port<em>folio</em></h1>
+            <p class="hero__lead">
+              UX design student at TUC Yrkeshögskola, focused on user-centred solutions that balance functionality and
+              usability.
+            </p>
+            <a class="btn btn--primary hero__cta hero__cta--desktop" href="#work">
+              See selected work
+              <svg class="icon icon--down" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3.75V14.25M13.5 9.75L9 14.25L4.5 9.75" /></svg>
+            </a>
+          </div>
+          <div class="hero__media">
+            <div class="hero__portrait">
+              <img src="assets/img/portrait.png" alt="Portrait of Emma Bjelkås" width="360" height="540" />
+              <div class="boil hero__frame hero__frame--desktop" aria-hidden="true">
+                <img src="assets/deco/frame-1.svg" alt="" /><img src="assets/deco/frame-2.svg" alt="" /><img src="assets/deco/frame-3.svg" alt="" />
+              </div>
+              <div class="boil hero__frame hero__frame--mobile" aria-hidden="true">
+                <img src="assets/deco/frame-4.svg" alt="" /><img src="assets/deco/frame-5.svg" alt="" /><img src="assets/deco/frame-6.svg" alt="" />
+              </div>
+            </div>
+            <a class="btn btn--primary hero__cta hero__cta--mobile" href="#work">
+              See selected work
+              <svg class="icon icon--down" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3.75V14.25M13.5 9.75L9 14.25L4.5 9.75" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SELECTED WORK ============ -->
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="container">
+          <header class="work__header reveal">
+            <h2 class="h-display" id="work-title">Selected work</h2>
+            <p class="lead work__intro">A selection of my UX work <br />– from app concepts to redesigns and graphic art.</p>
+          </header>
+
+          <div class="project-list">
+            <!-- 01 Refino -->
+            <a class="project reveal" href="refino.html">
+              <div class="project__cover cover cover--refino">
+                <div class="cover__layer cover__layer--a refino-desktop"><img src="assets/img/refino-desktop.png" alt="" /></div>
+                <div class="cover__layer cover__layer--b refino-mobile"><img src="assets/img/refino-mobile.png" alt="" /></div>
+              </div>
+              <div class="project__text">
+                <p class="eyebrow"><span class="num">01 — </span>UX DESIGN | WEBSITE</p>
+                <h3 class="project__title">Refino – Website &amp; Loan Application</h3>
+                <p class="project__desc">
+                  A clearer, calmer loan broker – from the start page and insurance pages to a loan application with
+                  BankID, bank data and a decision.
+                </p>
+                <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                <span class="textlink">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+              </div>
+            </a>
+
+            <!-- 02 Equestrian -->
+            <a class="project project--reverse reveal" href="equestrian.html">
+              <div class="project__cover cover cover--equestrian">
+                <div class="cover__layer cover__layer--a eq-3"><img src="assets/img/equestrian-mockup-3.png" alt="" /></div>
+                <div class="cover__layer cover__layer--c eq-2"><img src="assets/img/equestrian-mockup-2.png" alt="" /></div>
+                <div class="cover__layer cover__layer--b eq-1"><img src="assets/img/equestrian-mockup-1.png" alt="" /></div>
+              </div>
+              <div class="project__text">
+                <p class="eyebrow"><span class="num">02 — </span>UX DESIGN | APP CONCEPT</p>
+                <h3 class="project__title">Equestrian Management App</h3>
+                <p class="project__desc">
+                  One place for horse owners, stable owners and staff to handle bookings, vet visits and stable chat.
+                </p>
+                <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                <span class="textlink">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+              </div>
+            </a>
+
+            <!-- 03 Underbara Unge -->
+            <a class="project reveal" href="underbara.html">
+              <div class="project__cover cover cover--underbara">
+                <div class="cover__layer uu-logo"><img src="assets/img/underbara-logo.png" alt="" /></div>
+                <div class="cover__layer cover__layer--a uu-1"><img src="assets/img/underbara-mockup-1.png" alt="" /></div>
+                <div class="cover__layer cover__layer--b uu-2"><img src="assets/img/underbara-mockup-2.png" alt="" /></div>
+              </div>
+              <div class="project__text">
+                <p class="eyebrow"><span class="num">03 — </span>REDESIGN | MOBILE APP</p>
+                <h3 class="project__title">Underbara Unge – Redesign</h3>
+                <p class="project__desc">
+                  A calmer, more motivating memory-book app for new parents, with flexible steps and WCAG AA colours.
+                </p>
+                <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                <span class="textlink">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+              </div>
+            </a>
+
+            <!-- 04 Stallbacken -->
+            <a class="project project--reverse reveal" href="casestudy.html">
+              <div class="project__cover cover cover--stallbacken">
+                <p class="cs-title">Case<br />study</p>
+                <p class="cs-sub">STALLBACKEN</p>
+              </div>
+              <div class="project__text">
+                <p class="eyebrow"><span class="num">04 — </span>CASE STUDY | WEBSITE</p>
+                <h3 class="project__title">Case Study – Stallbacken</h3>
+                <p class="project__desc">
+                  Clearer hierarchy, more white space and accessible contrast for an equestrian competition site.
+                </p>
+                <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                <span class="textlink">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="container about__inner">
+          <div class="about__photo reveal">
+            <img src="assets/img/emma-cat.png" alt="Emma holding her cat" width="340" height="340" loading="lazy" />
+            <div class="boil about__frame about__frame--desktop" aria-hidden="true">
+              <img src="assets/deco/circle-1.svg" alt="" /><img src="assets/deco/circle-2.svg" alt="" /><img src="assets/deco/circle-3.svg" alt="" />
+            </div>
+            <div class="boil about__frame about__frame--mobile" aria-hidden="true">
+              <img src="assets/deco/circle-4.svg" alt="" /><img src="assets/deco/circle-5.svg" alt="" /><img src="assets/deco/circle-6.svg" alt="" />
+            </div>
+          </div>
+          <div class="about__text reveal">
+            <h2 class="h-section" id="about-title">About me</h2>
+            <p>
+              I'm a UX design student at TUC Yrkeshögskola since fall 2025, with a strong interest in usability and
+              inclusivity. I focus on user-centred solutions that balance functionality and usability.
+            </p>
+            <p>
+              Outside of UX I have a big passion for animals, video games and movies – my horse and my cat are the big
+              loves of my life.
+            </p>
+            <a class="textlink" href="https://www.linkedin.com/in/emma-bjelk%C3%A5s-497778252/" target="_blank" rel="noopener">
+              More about me
+              <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              <span class="sr-only">(LinkedIn, opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
+          </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
           </a>
         </div>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="index.html#about">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
       </div>
-    </header> -->
+    </footer>
 
-    <section class="home">
-      <img src="images/image0.jpg" class="home-img" alt="" />
-      <div class="home-content">
-        <h2>
-          EMMA BJELKÅS <br />
-        </h2>
-        <h3>
-          UX-DESIGNER <br/>
-        </h3>
-
-        <a href="work.html">
-        <h1>
-          
-            VIEW </br>
-            PORTFOLIO 
-            </a>
-        </h1> 
-        <!-- <a href="contact.html" class="btn">Get Started</a> -->   
-
-      </div>
-     
-    </section>
-
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>

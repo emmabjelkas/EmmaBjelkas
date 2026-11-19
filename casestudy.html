@@ -2,161 +2,307 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study – Stallbacken – Emma Bjelkås</title>
+    <meta
+      name="description"
+      content="Case study: re-imagining a well-known equestrian competition website with less cognitive load, clearer hierarchy and accessible contrast."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
+    <!-- Playfair's own arrow glyph for the "2.84 → 4.5:1" stat (not in the latin subset) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&text=%E2%86%92&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Case Study - Emma Bjelkås</title>
+    <link rel="stylesheet" href="css/pages/project.css" />
   </head>
   <body>
-    <header>     
-      <h4><a href="index.html">
-          EMMA BJELKÅS </a>
-        </h4>
-       
-       
-     <span>
-      <h6><a href="contact.html">
-        Contact</a>
-      </h6>
-          </span>
-      </header>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <ul class="breadcrumb">
-         <li><a href="index.html">Start</a></li>
-         <li>/</li>
-         <li><a href="work.html">My Work</a></li>
-         <li>/</li>
-         <li>Case Study - Stallbacken</li>
-        </ul>  
-        
-      <section>
-        <div class="title">
-        <h1>CASE STUDY </br> - STALLBACKEN </h1>
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <button class="site-nav__link site-nav__link--projects" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown">
+              Projects
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <hr />
+              <a href="art.html">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <a class="site-nav__link" href="index.html#about">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="art.html">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="index.html#about">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main id="main">
+      <!-- ============ PROJEKTHUVUD ============ -->
+      <section class="project-hero">
+        <div class="container project-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Start</a><span aria-hidden="true">/</span><a href="work.html">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Case Study – Stallbacken</span></nav>
+          <h1 class="project-hero__title">Case Study – Stallbacken</h1>
+          <div class="project-hero__meta">
+            <p class="project-hero__tags">Case study<span class="sep" aria-hidden="true">|</span>UX design<span class="sep" aria-hidden="true">|</span>Figma</p>
+          </div>
+          <p class="project-hero__intro">
+            Re-imagining a well-known equestrian competition website with less cognitive load, clearer hierarchy and
+            accessible contrast.
+          </p>
         </div>
-
-        <h3 style="margin-top: 70px;">Introduction</h3>
-        <p>
-          Stallbacken is a somewhat known website in the equestrian world that gathers useful tools and information about competition,
-          both for riders and organizers. The idea of the website is very useful and could make it easier for equestrians to find 
-          all the information they need if they're new to the competitive world. However, when visiting the website, I couldn't 
-          help but notice that the experience wasn't as fulfilling as i had hoped for a website people recommended to others. 
-          I saw this as an oppertunity to re-imagine the digital experience and the way that people engage with Stallbackens content.
-          
-        </p>
-        
-        <h3 style="margin-top: 70px;">Challenge</h3>
-        <p>
-           On first glance, the website really pops! Unfortunatly not in a good way. The starting screen has a strong color that
-           doesn't feel inviting and it's straining on the eye. The font used is the classic Times New Roman, but it's hard to read
-           mostly because of the sizing. Everything is written in the same size, even the titles in the menu. 
-        </p>
-           
-        <div class="portfolio">
-        <div class="item">
-          <img src="images\stallbacken_start.png" alt="" />
-         </div> 
-                           
-        </div>
-
-        <h3 style="margin-top: 70px;">Discovery</h3>        
-        <p>
-          Opon doing my research, I discovered that the website is run by one single person, not a team of people. So here I was 
-          optimistic and joyful because the website is simply made by a person that has a burning intrest for what they're creating. 
-          I decided to start with one objective for the redesign; lessen the cognitive load and give it a "cleaner" look. 
-          Later on I would love to further expand on my work. 
-        </p>
-
-        <h3 style="margin-top: 70px;">Strategy</h3>        
-        <p>
-          1. Create a more clean look with less cognitive load and easier to read texts.
-        </p>
-
-        <p>
-          2. Elevate the overall experience to align with the reputation of the website.          
-        </p>        
-
-        <h3 style="margin-top: 70px;">Solutions</h3>        
-        
-          <h6 style="margin-top: 50px;">1. Chose a neutral color palette.</h6>
-          <p>
-            Since the website is made to give useful information about competitions, it needs to come across as trust worthy. 
-            Therefore I would pick blue as the main color for the website. The color blue is used for multiple brands in the 
-            equestrian industry, such as the very brand that writes the rules for competitions - Svenska Ridsportsförbundet. 
-        </p>
-        
-        <p>
-          Below follows an example of a blue color palette perfect for the site. 
-        </p>
-        <div class="case">
-        <div class="item" style="margin-top: -20px;">
-          <img src="images\bluelagoon.png" alt="" />
-         </div> 
-                           
-        </div>
-
-        <h6 style="margin-top: 50px;">2. Create clearer hierarchy and more white space. </h6>
-        <p>          
-          When visiting the website, the user should quickly understand what the website is about and what its purpose is. 
-          The user should also easily find information about their discipline, such as dressage or showjumping. The menu 
-          containing links to each discipline are placed on top of the screen so a frequent user quickly can access them.
-          By adding a clearly visable Headline or Hero Image, it takes no longer than a few seconds
-          for the user to recieve this information. I make sure to add this below the context of the menu. </br>
-          The website has very little use of white space. Titles, links, pictures and information are simply put in one single
-          group. It also doesn't use a clear hierarchy for all the elements on the website. 
-          The one thing they use is dividing sections with boxes and lines to make it easier for the user to see what elements go
-          together. By simply using different sizing of the different titles and paragraphs, there is no need to divide them 
-          with lines. </br>
-          By removing most of the overwhelming information on the starting screen and putting them in categories in the menu,
-          the cognitive load is redused. An exampel is the information about pricing in the shop, I removed this from the 
-          starting screen and put it on the "Shop" page. 
-        </p>
-        
-        <h6 style="margin-top: 50px;">3. Accessibility. </h6>
-        <p>
-          Using a Sans-Serif font, such as Inter and Instrument Sans, would make the text easier to read and Therefore
-          more accessibile for people with visual impairment. </br>
-          As mentioned earlier, different size fonts are good to use, but also different thickness. A bolder Headline to make it 
-          stand out and a thinner font for paragraphs to not overwhelm the user with information.
-        </p>
-        <p>
-          Other than changing the font, I would use a new color palette that passes WCAG AA standards for color contrast. As of 
-          right now, there are texts that fail these standards. On the bottom of the screen they use a text in the color #38AA76 
-          against the background color #FFFFCC, which has a ratio of 2.84:1. In order to pass the WCAG AA standards for normal text, 
-          it needs a ratio of 4.5:1.
-        </p>
-
-        <h3 style="margin-top: 70px;">The design</h3>
-        <p>
-          Implementing the changes mentioned above, I put together a mockup that you can see below. The biggest difference is the 
-          clearer hierarchy, a clearly visable headline and bigger use of whitespace.
-        </p>
-
-        <div class="portfolio">
-        <div class="item">
-          <img src="images\exempel.png" alt="" />
-         </div> 
-                           
-        </div>
-
-        <h3 style="margin-top: 70px;">Impact</h3>
-        <p>
-          By transitioning from a cluttered layout to a structured, WCAG-compliant design, the redesign achieves the core goals: </br>
-          The new color palette moves from a failing $2.84:1$ ratio to a $4.5:1$ (AA) standard, ensuring that the site is usable for 
-          equestrians with visual impairments. By moving secondary information (like shop pricing) to dedicated sub-pages and utilizing
-          whitespace, the "time-to-task" for finding competition rules is significantly reduced. </br>
-          Last but not least, bmoving secondary information (like shop pricing) to dedicated sub-pages and utilizing whitespace, 
-          the "time-to-task" for finding competition rules is significantly reduced.
-        </p>
-        <p style="margin-top: 70px;">
-          -- Case Study by Emma Bjelkås 2026 --
-        </p>
-
       </section>
 
-      <button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
+      <!-- ============ COVER ============ -->
+      <section class="project-cover project-cover--stallbacken reveal" aria-hidden="true">
+        <div class="container">
+          <div class="project-cover__frame">
+            <p class="sb-cover__title"><span>Case</span> <span>study</span></p>
+            <p class="sb-cover__sub">STALLBACKEN</p>
+          </div>
+        </div>
+      </section>
 
-    
+      <!-- 01 Introduction -->
+      <section class="p-section reveal" aria-labelledby="s-intro">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">01</p><h2 class="p-section__title" id="s-intro">Introduction</h2></header>
+          <div class="p-section__content">
+            <p>
+              Stallbacken is a somewhat known website in the equestrian world that gathers useful tools and information
+              about competition, both for riders and organizers. The idea of the website is very useful and could make it
+              easier for equestrians who are new to the competitive world to find all the information they need.
+            </p>
+            <p>
+              However, I felt the design didn't yet reflect how valued the site is among equestrians. I saw this as an
+              opportunity to re-imagine the digital experience and the way people engage with Stallbacken's content.
+            </p>
+          </div>
+        </div>
+      </section>
 
-<script src="js/script.js"></script> 
-</body>
-</html>      
+      <!-- 02 Challenge -->
+      <section class="p-section reveal" aria-labelledby="s-challenge">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">02</p><h2 class="p-section__title" id="s-challenge">Challenge</h2></header>
+          <div class="p-section__content">
+            <p>
+              At first glance, the website makes a bold impression. The start screen uses a strong colour that can be
+              tiring for the eyes, and while Times New Roman is a classic, the uniform text size makes it hard to scan –
+              even the menu titles share the same size as the body text.
+            </p>
+            <figure class="shot shot--plain">
+              <img src="assets/img/stallbacken/original-start-page.jpg" alt="The original Stallbacken start page on a laptop: a bright yellow background, Times New Roman text in one size and boxed sections" width="1503" height="927" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 Discovery -->
+      <section class="p-section reveal" aria-labelledby="s-discovery">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">03</p><h2 class="p-section__title" id="s-discovery">Discovery</h2></header>
+          <div class="p-section__content">
+            <p>
+              During my research I discovered that the website is run by one single person, not a team – someone with a
+              burning interest in what they're creating. I decided to start with one objective for the redesign: lessen
+              the cognitive load and give it a cleaner look. Later on I would love to expand on my work further.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 Strategy -->
+      <section class="p-section reveal" aria-labelledby="s-strategy">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">04</p><h2 class="p-section__title" id="s-strategy">Strategy</h2></header>
+          <div class="p-section__content">
+            <div class="steps">
+              <div class="step">
+                <p class="step__num">01</p>
+                <p>Create a cleaner look with less cognitive load and easier-to-read texts.</p>
+              </div>
+              <div class="step">
+                <p class="step__num">02</p>
+                <p>Give the experience a modern look that matches the site's strong reputation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 Solutions -->
+      <section class="p-section reveal" aria-labelledby="s-solutions">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">05</p><h2 class="p-section__title" id="s-solutions">Solutions</h2></header>
+          <div class="p-section__content p-section__content--loose">
+            <h3 class="p-section__sub">1. A neutral colour palette</h3>
+            <p>
+              Since the website gives information about competitions, it needs to come across as trustworthy. Blue is used
+              by many brands in the equestrian industry – such as Svenska Ridsportförbundet, who write the competition
+              rules – so blue became the main colour.
+            </p>
+            <figure class="shot shot--plain">
+              <img src="assets/img/stallbacken/blue-lagoon-palette.png" alt="The Blue Lagoon colour palette: #F1F2EB, #D8DAD3, #7D84B2, #143166 and #0F0F12" width="796" height="376" loading="lazy" />
+            </figure>
+            <h3 class="p-section__sub">2. Clearer hierarchy and more white space</h3>
+            <p>
+              Users should quickly understand what the site is about and easily find their discipline, such as dressage
+              or showjumping. Discipline links sit at the top, with a clearly visible headline or hero image below the menu.
+            </p>
+            <p>
+              Instead of dividing everything with boxes and lines, different sizes for titles and paragraphs create the
+              hierarchy. Secondary information – like shop pricing – moves from the start screen to its own page, which
+              reduces the cognitive load.
+            </p>
+            <h3 class="p-section__sub">3. Accessibility</h3>
+            <p>
+              A sans-serif font such as Inter or Instrument Sans makes the text easier to read, with bolder headlines and
+              lighter paragraphs. The new palette also fixes contrast: today a #38AA76 text on #FFFFCC has a ratio of
+              2.84:1, while WCAG AA requires 4.5:1 for normal text.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stat -->
+      <section class="p-stat reveal">
+        <div class="container p-stat__inner">
+          <div class="p-stat__box">
+            <p class="p-stat__big">2.84 → 4.5:1</p>
+            <p class="p-stat__text">
+              Colour contrast before and after the redesign – from failing to passing WCAG AA for normal text.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 The design -->
+      <section class="p-section p-section--flush reveal" aria-labelledby="s-design">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">07</p><h2 class="p-section__title" id="s-design">The design</h2></header>
+          <div class="p-section__content">
+            <p>
+              Implementing the changes above, I put together a mockup. The biggest differences are the clearer hierarchy,
+              a clearly visible headline and more white space.
+            </p>
+            <figure class="shot shot--plain">
+              <img src="assets/img/stallbacken/redesign-mockup.jpg" alt="Redesigned Stallbacken start page: logo and search, discipline links, a photo collage hero reading “Everything you need to know about competing, in one place” and a news section" width="1904" height="1929" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 Impact -->
+      <section class="p-section reveal" aria-labelledby="s-impact">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">08</p><h2 class="p-section__title" id="s-impact">Impact</h2></header>
+          <div class="p-section__content">
+            <p>
+              By going from a dense layout to a structured, WCAG-compliant design, the redesign achieves its core goals.
+              The new colour palette moves from a failing 2.84:1 ratio to the 4.5:1 AA standard, so the site is usable for
+              equestrians with visual impairments.
+            </p>
+            <p>
+              By moving secondary information to dedicated sub-pages and using white space, the time it takes to find
+              competition rules is significantly reduced.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NEXT PROJECT ============ -->
+      <section class="next-project reveal" aria-labelledby="next-title">
+        <div class="container next-project__inner">
+          <div class="next-project__row">
+            <div class="next-project__text">
+              <p class="next-project__label">Next project</p>
+              <h2 class="next-project__title" id="next-title">Refino – Website &amp; Loan Application</h2>
+              <div class="next-project__links">
+                <a class="textlink" href="refino.html">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></a>
+                <a class="textlink textlink--grey" href="work.html"><svg class="icon icon--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.67 8H3.33M7.33 3.33L3.33 8L7.33 12.67" /></svg> All projects</a>
+              </div>
+            </div>
+            <a class="next-project__cover" href="refino.html" tabindex="-1" aria-hidden="true">
+              <div class="cover cover--refino">
+                <div class="cover__layer cover__layer--a refino-desktop"><img src="assets/img/refino-desktop.png" alt="" loading="lazy" /></div>
+                <div class="cover__layer cover__layer--b refino-mobile"><img src="assets/img/refino-mobile.png" alt="" loading="lazy" /></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
+          </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="index.html#about">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

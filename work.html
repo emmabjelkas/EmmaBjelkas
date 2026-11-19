@@ -2,151 +2,265 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All projects – Emma Bjelkås</title>
+    <meta
+      name="description"
+      content="Everything Emma Bjelkås has worked on – UX projects, redesigns, case studies and graphic art."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="css/style.css" />
-    <title>My Work - Emma Bjelkås</title>
+    <link rel="stylesheet" href="css/pages/work.css" />
   </head>
   <body>
-    <header>     
-      <h4><a href="index.html">
-          EMMA BJELKÅS </a>
-        </h4>
-       
-       
-     <span>
-      <h6><a href="contact.html">
-        Contact</a>
-      </h6>
-          </span>
-      </header>
-       
-        <ul class="breadcrumb">
-         <li><a href="index.html">Start</a></li>
-         <li>/</li>
-         <li>My Work</li>
-        </ul>  
-          
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <!--<div class="logo">Emma Bjelkås</div></b>
-      <div class="toggle"></div>
-      <div class="navigation">
-        <a href="index.html">Home</a></li>
-          <li><a href="aboutMe.html">About Me</a></li> 
-          <li><a href="work.html">Work</a></li> 
-          <li><a href="contact.html">Contact</a>-->
-        <!-- <div class="social-bar">
-          <ul>
-            <li>
-              <a href="https://facebook.com">
-                <img src="images/facebook.png" target="_blank" alt="" />
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <button class="site-nav__link site-nav__link--projects" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown" aria-current="true">
+              Projects
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <hr />
+              <a href="art.html">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html" aria-current="page">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <a class="site-nav__link" href="index.html#about">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="art.html">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html" aria-current="page">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="index.html#about">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main id="main">
+      <!-- ============ PAGE HEADER + FILTER ============ -->
+      <section class="page-header">
+        <div class="container page-header__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Start</a><span aria-hidden="true">/</span><span aria-current="page">Projects</span>
+          </nav>
+          <div class="page-header__row">
+            <h1 class="page-header__title">All projects</h1>
+            <p class="page-header__intro">Everything I have worked on – UX projects, redesigns, case studies and graphic art.</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Filter projects">
+            <button class="tab" role="tab" id="tab-all" data-filter="all" aria-selected="true" aria-controls="project-list">
+              All<span class="tab__count" data-count="all">4</span>
+            </button>
+            <button class="tab" role="tab" id="tab-ux-design" data-filter="ux-design" aria-selected="false" aria-controls="project-list" tabindex="-1">
+              UX design<span class="tab__count" data-count="ux-design">2</span>
+            </button>
+            <button class="tab" role="tab" id="tab-redesign" data-filter="redesign" aria-selected="false" aria-controls="project-list" tabindex="-1">
+              Redesign<span class="tab__count" data-count="redesign">1</span>
+            </button>
+            <button class="tab" role="tab" id="tab-case-study" data-filter="case-study" aria-selected="false" aria-controls="project-list" tabindex="-1">
+              Case study<span class="tab__count" data-count="case-study">1</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECT LIST ============ -->
+      <section class="work-projects" aria-label="Projects">
+        <div class="container">
+          <p class="sr-only" id="filter-status" aria-live="polite"></p>
+          <ul class="work-list" id="project-list" role="tabpanel" aria-labelledby="tab-all">
+            <!-- Refino -->
+            <li class="work-item" data-category="ux-design">
+              <a class="project work-project reveal" href="refino.html">
+                <div class="project__cover cover cover--refino">
+                  <div class="cover__layer cover__layer--a refino-desktop"><img src="assets/img/refino-desktop.png" alt="" /></div>
+                  <div class="cover__layer cover__layer--b refino-mobile"><img src="assets/img/refino-mobile.png" alt="" /></div>
+                </div>
+                <div class="project__text">
+                  <div class="work-meta">
+                    <p class="work-meta__tags">Website <span aria-hidden="true">|</span> UX/UI design <span aria-hidden="true">|</span> Figma</p>
+                  </div>
+                  <h2 class="project__title">Refino – Website &amp; Loan Application</h2>
+                  <p class="project__desc">
+                    A clearer, calmer loan broker – from the start page and insurance pages to a loan application with
+                    BankID, bank data and a decision.
+                  </p>
+                  <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                </div>
               </a>
             </li>
-            <li>
-              <a href="https://twitter.com">
-                <img src="images/twitter.png" target="_blank" alt="" />
+
+            <!-- Equestrian -->
+            <li class="work-item" data-category="ux-design">
+              <a class="project work-project reveal" href="equestrian.html">
+                <div class="project__cover cover cover--equestrian">
+                  <div class="cover__layer cover__layer--a eq-3"><img src="assets/img/equestrian-mockup-3.png" alt="" /></div>
+                  <div class="cover__layer cover__layer--c eq-2"><img src="assets/img/equestrian-mockup-2.png" alt="" /></div>
+                  <div class="cover__layer cover__layer--b eq-1"><img src="assets/img/equestrian-mockup-1.png" alt="" /></div>
+                </div>
+                <div class="project__text">
+                  <div class="work-meta">
+                    <p class="work-meta__tags">App concept <span aria-hidden="true">|</span> UX/UI design <span aria-hidden="true">|</span> Figma</p>
+                    <span class="status"><span class="status__dot" aria-hidden="true"></span>In progress</span>
+                  </div>
+                  <h2 class="project__title">Equestrian Management App</h2>
+                  <p class="project__desc">
+                    One place for horse owners, stable owners and staff to handle bookings, vet visits and stable chat.
+                  </p>
+                  <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                </div>
               </a>
             </li>
-            <li>
-              <a href="https://instagram.com">
-                <img src="images/instagram.png" target="_blank" alt="" />
+
+            <!-- Underbara Unge -->
+            <li class="work-item" data-category="redesign">
+              <a class="project work-project reveal" href="underbara.html">
+                <div class="project__cover cover cover--underbara">
+                  <div class="cover__layer uu-logo"><img src="assets/img/underbara-logo.png" alt="" /></div>
+                  <div class="cover__layer cover__layer--a uu-1"><img src="assets/img/underbara-mockup-1.png" alt="" /></div>
+                  <div class="cover__layer cover__layer--b uu-2"><img src="assets/img/underbara-mockup-2.png" alt="" /></div>
+                </div>
+                <div class="project__text">
+                  <div class="work-meta">
+                    <p class="work-meta__tags">Redesign <span aria-hidden="true">|</span> UX/UI design <span aria-hidden="true">|</span> Figma</p>
+                  </div>
+                  <h2 class="project__title">Underbara Unge – Redesign</h2>
+                  <p class="project__desc">
+                    A calmer, more motivating memory-book app for new parents, with flexible steps and WCAG AA colours.
+                  </p>
+                  <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                </div>
+              </a>
+            </li>
+
+            <!-- Stallbacken -->
+            <li class="work-item" data-category="case-study">
+              <a class="project work-project reveal" href="casestudy.html">
+                <div class="project__cover cover cover--stallbacken">
+                  <p class="cs-title">Case<br />study</p>
+                  <p class="cs-sub">STALLBACKEN</p>
+                </div>
+                <div class="project__text">
+                  <div class="work-meta">
+                    <p class="work-meta__tags">Case study <span aria-hidden="true">|</span> UX/UI design <span aria-hidden="true">|</span> Figma</p>
+                  </div>
+                  <h2 class="project__title">Case Study – Stallbacken</h2>
+                  <p class="project__desc">
+                    Clearer hierarchy, more white space and accessible contrast for an equestrian competition site.
+                  </p>
+                  <span class="btn btn--outline">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></span>
+                </div>
               </a>
             </li>
           </ul>
-          <a href="mailto:you@email.com" class="email-icon">
-            <img src="images/email.png" alt="" />
+        </div>
+      </section>
+
+      <!-- ============ GRAPHIC ART TEASER ============ -->
+      <section class="art-teaser" aria-labelledby="art-teaser-title">
+        <div class="container art-teaser__inner">
+          <div class="art-teaser__text reveal">
+            <h2 class="art-teaser__title" id="art-teaser-title">Graphic art</h2>
+            <p class="art-teaser__desc">Portraits and paintings – people, horses and colour.</p>
+            <a class="btn btn--pink art-teaser__cta art-teaser__cta--desktop" href="art.html">
+              See all graphic art
+              <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+            </a>
+          </div>
+          <ul class="art-teaser__thumbs reveal">
+            <li>
+              <a class="art-thumb" href="art.html#self-portrait">
+                <span class="art-crop art-crop--self"><img src="assets/img/art/self-portrait.jpg" alt="Self portrait" loading="lazy" /></span>
+              </a>
+            </li>
+            <li>
+              <a class="art-thumb" href="art.html#pink-paint">
+                <img class="art-thumb__cover" src="assets/img/art/pink-paint.png" alt="Art – Pink Paint" loading="lazy" />
+              </a>
+            </li>
+            <li class="art-teaser__thumb--desktop">
+              <a class="art-thumb" href="art.html#don-caprillo">
+                <img class="art-thumb__cover" src="assets/img/art/don-caprillo.png" alt="Horse Portrait – Don Caprillo" loading="lazy" />
+              </a>
+            </li>
+          </ul>
+          <a class="btn btn--pink art-teaser__cta art-teaser__cta--mobile" href="art.html">
+            See all graphic art
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
           </a>
         </div>
-      </div>-->
-       
-    
+      </section>
+    </main>
 
-    <section>
-      <div class="title">
-        <h1>MY WORK</h1>
-        
-        <p>
-           
-          
-        </p>
-      </div>
-
-      
-
-      <div class="portfolio">
-        <div class="title">
-        <h2 style="margin-left: 10px; margin-top: 0">UX-DESIGN</h2>
-        <div class="item">
-          <img src="images/hästapp_start_portfolio2.jpg" alt="" />
-          <div class="action">
-            <h6><a href="equestrian.html">Equestrian Management App</a></h6>
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
           </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+          </a>
         </div>
-        <div class="item">
-          <img src="images\underbaraung_portfolio_start2.png" alt="" />
-          <div class="action">
-            <h6><a href="underbara.html">Underbara Unge - Redesign</a></h6>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images\UX Case Study2.png" alt="" />
-          <div class="action">
-            <h6><a href="casestudy.html">Case Study - Stallbacken</a></h6>
-          </div>
-        </div>
-
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="index.html#about">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
         </div>
       </div>
-                
-        <div class="title">
-        <h2 style="margin-left: 10px; margin-top: 100px">GRAPHIC ART</h2>
-        <div class="art">
-        
-          <div class="item">
-          <img src="images\selfport_peak.png" alt="" />
-          <div class="action">
-            <h6><a href="images\selfport.jpg">Self portrait</a></h6>          
-          </div>
-          
-        </div>
-        <div class="item">
-          <img src="images\yuki_peak.png" alt="" />
-          <div class="action">
-            <h6><a href="images\yuki_port.png">Horse Portrait - Hiroyuki</a></h6>
-            </div>
-          </div>
-          <div class="item">
-          <img src="images\artpink_peak.png" alt="" />
-            <div class="action">
-              <h6><a href="images\pink_art.PNG">Art - Pink Paint</a></h6>
-            </div>
-          </div>
-        <div class="item">
-          <img src="images\olle.2_peak.png" alt="" />
-          <div class="action">
-            <h6><a href="images\olle.2.png">Horse Portrait - Don Caprillo</a></h6>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images\bosse_peak.PNG" alt="" />
-          <div class="action">
-            <h6><a href="images\bosse.namnskylt.PNG">Horse Portrait - Mr Boo</a></h6>
-          </div>        
-        </div> 
-                  
-        </div>                
-       </div>    
-        
-    </section>
-
-    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
-    
-           
-       
+    </footer>
 
     <script src="js/script.js"></script>
-
-   
-  </body>   
-  
+    <script src="js/work.js"></script>
+  </body>
 </html>

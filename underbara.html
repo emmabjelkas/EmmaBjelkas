@@ -2,113 +2,279 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underbara Unge – Redesign – Emma Bjelkås</title>
+    <meta
+      name="description"
+      content="Case study: a school redesign of a memory-book app for parents, combining user-centred research with strict requirements for accessibility and sustainability."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Underbara unge - Emma Bjelkås</title>
+    <link rel="stylesheet" href="css/pages/project.css" />
   </head>
   <body>
-    <header>     
-      <h4><a href="index.html">
-          EMMA BJELKÅS </a>
-        </h4>
-       
-       
-     <span>
-      <h6><a href="contact.html">
-        Contact</a>
-      </h6>
-          </span>
-      </header>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <ul class="breadcrumb">
-         <li><a href="index.html">Start</a></li>
-         <li>/</li>
-         <li><a href="work.html">My Work</a></li>
-         <li>/</li>
-         <li>Underbara Unge - Redesign</li>
-        </ul>  
-        
-      <section>
-        <div class="title">
-        <h1>UNDERBARA UNGE </br> - REDESIGN</h1>
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <button class="site-nav__link site-nav__link--projects" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown">
+              Projects
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <hr />
+              <a href="art.html">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <a class="site-nav__link" href="index.html#about">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="art.html">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="index.html#about">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
-        <p>
-          This is a school project where the goal was to redesign and improve an already existing service, by combining usercentred research with 
-          strict requirements for accessibility and sustainability. The mobile app Underbara Unge is made for parents to create a personal
-          memory book of their child's first year. </br> 
-          The final design lowers the threshold for the user with flexible steps and motivational progression. These improvements create 
-          a more inclusive and undemanding experience that better supports the user's everyday life and increases the likelihood that the 
-          book will be completed. </br> 
-          The new design is more accessibile thanks to the change of color scheme, the new colors reach the WCAG AA standards.
-          
-        </p>
-        <p>
-          Below you can see the old followed by the new design. You can see the different colors schemes and the overall structure.
-        </p>
+    <main id="main">
+      <!-- ============ PROJEKTHUVUD ============ -->
+      <section class="project-hero">
+        <div class="container project-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Start</a><span aria-hidden="true">/</span><a href="work.html">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Underbara Unge – Redesign</span></nav>
+          <h1 class="project-hero__title">Underbara Unge – Redesign</h1>
+          <div class="project-hero__meta">
+            <p class="project-hero__tags"><span class="only-desktop">Redesign (school project)</span><span class="only-mobile">Redesign<span class="sep sep--tight" aria-hidden="true">|</span>School project</span><span class="sep" aria-hidden="true">|</span>UX/UI design<span class="sep" aria-hidden="true">|</span>Figma</p>
+          </div>
+          <p class="project-hero__intro">
+            A school redesign of a memory-book app for parents, combining user-centred research with strict requirements
+            for accessibility and sustainability.
+          </p>
         </div>
-
-        <h3 style="margin-top: 70px;">Old design</h3>
-
-        <div class="project">
-        <div class="item">
-          <img src="images\uu_före1.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\uu_före2.png" alt="" />
-         </div>  
-         <div class="item">
-          <img src="images\uu_före3.png" alt="" />
-         </div> 
-         <div class="item">
-          <img src="images\uu_före4.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\uu_före5.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\uu_före6.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\uu_före7.png" alt="" />
-         </div>
-         </div>
-
-        <h3 style="margin-top: 70px;">New design</h3>
-
-        <div class="project">
-        <div class="item">
-          <img src="images\underbaraunge_logga in.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\underbaraunge_konto.png" alt="" />
-         </div>  
-         <div class="item">
-          <img src="images\underbaraunge_profil.png" alt="" />
-         </div> 
-         <div class="item">
-          <img src="images\underbaraunge_böcker.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\underbaraunge_översikt.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\underbaraunge_månad.png" alt="" />
-         </div>
-         <div class="item">
-          <img src="images\underbaraunge_månad2.png" alt="" />
-         </div>
-         
-         
-         
-        </div>
-
       </section>
 
-      <button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
+      <!-- ============ COVER ============ -->
+      <section class="project-cover project-cover--underbara reveal">
+        <div class="container">
+          <div class="project-cover__frame" role="img" aria-label="The Underbara Unge logo next to two phones showing the redesigned log-in screen and the month page">
+            <div class="uu-cover__item uu-cover__logo"><img src="assets/img/underbara-logo.png" alt="" /></div>
+            <div class="uu-cover__item uu-cover__m1"><img src="assets/img/underbara-mockup-1.png" alt="" /></div>
+            <div class="uu-cover__item uu-cover__m2"><img src="assets/img/underbara-mockup-2.png" alt="" /></div>
+          </div>
+        </div>
+      </section>
 
-    
+      <!-- 01 The project -->
+      <section class="p-section reveal" aria-labelledby="s-project">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">01</p><h2 class="p-section__title" id="s-project">The project</h2></header>
+          <div class="p-section__content">
+            <p>
+              This is a school project where the goal was to redesign and improve an already existing service, by
+              combining user-centred research with strict requirements for accessibility and sustainability.
+            </p>
+            <p>The mobile app Underbara Unge is made for parents to create a personal memory book of their child's first year.</p>
+          </div>
+        </div>
+      </section>
 
-<script src="js/script.js"></script> 
-</body>
-</html>      
+      <!-- 02 The solution -->
+      <section class="p-section reveal" aria-labelledby="s-solution">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">02</p><h2 class="p-section__title" id="s-solution">The solution</h2></header>
+          <div class="p-section__content">
+            <p>
+              The final design lowers the threshold for the user with flexible steps and motivational progression. These
+              improvements create a more inclusive and undemanding experience that better supports the user's everyday
+              life and increases the likelihood that the book will be completed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stat -->
+      <section class="p-stat reveal">
+        <div class="container p-stat__inner">
+          <div class="p-stat__box">
+            <p class="p-stat__big">WCAG AA</p>
+            <p class="p-stat__text">
+              The new design is more accessible thanks to the change of colour scheme – the new colours reach the WCAG AA
+              standards.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Old design -->
+      <section class="screens screens--first reveal" aria-labelledby="s-old">
+        <div class="container screens__inner">
+          <div class="screens__heading">
+            <h2 class="screens__title" id="s-old">Old design</h2>
+            <p class="screens__count">7 screens</p>
+          </div>
+          <div class="screens__grid screens__grid--tight">
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/old-1.png" alt="Old design: onboarding screen with the logo and an explanation of how the app works" width="380" height="828" loading="lazy" /></div>
+              <figcaption>Old 1</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/old-2.png" alt="Old design: log-in screen with Google and Facebook options" width="405" height="879" loading="lazy" /></div>
+              <figcaption>Old 2</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/old-3.png" alt="Old design: registration screen" width="406" height="882" loading="lazy" /></div>
+              <figcaption>Old 3</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/old-4.png" alt="Old design: my account screen" width="404" height="878" loading="lazy" /></div>
+              <figcaption>Old 4</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/old-5.png" alt="Old design: week 1 page with text, weight, length and photos" width="403" height="879" loading="lazy" /></div>
+              <figcaption>Old 5</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/old-6.png" alt="Old design: milestones of the first year as a long form" width="403" height="880" loading="lazy" /></div>
+              <figcaption>Old 6</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/old-7.png" alt="Old design: tooth chart with a date field for each tooth" width="405" height="879" loading="lazy" /></div>
+              <figcaption>Old 7</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- New design -->
+      <section class="screens reveal" aria-labelledby="s-new">
+        <div class="container screens__inner">
+          <div class="screens__heading">
+            <h2 class="screens__title" id="s-new">New design</h2>
+            <p class="screens__count">7 screens</p>
+          </div>
+          <div class="screens__grid screens__grid--tight">
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/new-log-in.png" alt="New design: log-in screen with the logo and a guest option" width="406" height="885" loading="lazy" /></div>
+              <figcaption>Log in</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/new-account.png" alt="New design: account screen with profiles, settings and language" width="407" height="888" loading="lazy" /></div>
+              <figcaption>Account</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/new-profile.png" alt="New design: profile screen with recent activity" width="407" height="885" loading="lazy" /></div>
+              <figcaption>Profile</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/new-books.png" alt="New design: my books screen with a progress bar showing 20 % done" width="407" height="885" loading="lazy" /></div>
+              <figcaption>Books</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/new-overview.png" alt="New design: overview of the book with expandable months" width="391" height="852" loading="lazy" /></div>
+              <figcaption>Overview</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/new-month.png" alt="New design: month 1 text tab with length, weight, heading and a text field with AI help" width="406" height="886" loading="lazy" /></div>
+              <figcaption>Month</figcaption>
+            </figure>
+            <figure class="screen">
+              <div class="screen__img"><img src="assets/img/underbara/new-month-2.png" alt="New design: month 1 layout tab with page layouts and a photo spread preview" width="406" height="885" loading="lazy" /></div>
+              <figcaption>Month 2</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NEXT PROJECT ============ -->
+      <section class="next-project reveal" aria-labelledby="next-title">
+        <div class="container next-project__inner">
+          <div class="next-project__row">
+            <div class="next-project__text">
+              <p class="next-project__label">Next project</p>
+              <h2 class="next-project__title" id="next-title">Case Study – Stallbacken</h2>
+              <div class="next-project__links">
+                <a class="textlink" href="casestudy.html">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></a>
+                <a class="textlink textlink--grey" href="work.html"><svg class="icon icon--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.67 8H3.33M7.33 3.33L3.33 8L7.33 12.67" /></svg> All projects</a>
+              </div>
+            </div>
+            <a class="next-project__cover" href="casestudy.html" tabindex="-1" aria-hidden="true">
+              <div class="cover cover--stallbacken">
+                <p class="cs-title">Case<br />study</p>
+                <p class="cs-sub">STALLBACKEN</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
+          </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="index.html#about">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
