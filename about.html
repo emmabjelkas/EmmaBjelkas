@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – Emma Bjelkås</title>
+    <meta
+      name="description"
+      content="About Emma Bjelkås – UX design student at TUC Yrkeshögskola: education, skills and work experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages/about.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <button class="site-nav__link site-nav__link--projects" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown">
+              Projects
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <hr />
+              <a href="art.html">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <a class="site-nav__link" href="about.html" aria-current="page">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="art.html">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="about.html" aria-current="page">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main id="main">
+      <!-- ============ PAGE HEADER ============ -->
+      <section class="page-header">
+        <div class="container page-header__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Start</a><span aria-hidden="true">/</span><span aria-current="page">About</span></nav>
+          <div class="page-header__row">
+            <h1 class="page-header__title">About me</h1>
+            <p class="page-header__intro">UX design student with a love for animals, art and accessible design.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container about-page">
+        <!-- ============ INTRO ============ -->
+        <section class="about-intro" aria-labelledby="intro-title">
+          <div class="about-intro__photo reveal">
+            <img src="assets/img/emma-cat.png" alt="Emma holding her cat" width="440" height="440" />
+            <div class="boil about-intro__frame about-intro__frame--desktop" aria-hidden="true">
+              <img src="assets/deco/circle-1.svg" alt="" /><img src="assets/deco/circle-2.svg" alt="" /><img src="assets/deco/circle-3.svg" alt="" />
+            </div>
+            <div class="boil about-intro__frame about-intro__frame--mobile" aria-hidden="true">
+              <img src="assets/deco/circle-4.svg" alt="" /><img src="assets/deco/circle-5.svg" alt="" /><img src="assets/deco/circle-6.svg" alt="" />
+            </div>
+          </div>
+          <div class="about-intro__text reveal">
+            <p class="eyebrow">Hi, I'm Emma</p>
+            <h2 class="h-section" id="intro-title">A bit about me</h2>
+            <p>
+              I'm a UX design student at TUC Yrkeshögskola since fall 2025, with a strong interest in usability and
+              inclusivity. My studies have given me an analytical mindset and a solid understanding of how systems are
+              designed and built – and I like to work inclusively, iteratively and with empathy for the people I design
+              for.
+            </p>
+            <p>
+              Outside of UX I have a big passion for animals, video games and movies – my horse and my cat are the loves
+              of my life. I also draw and paint, both digitally and traditionally, mostly portraits of people and horses.
+            </p>
+          </div>
+        </section>
+
+        <!-- ============ EDUCATION ============ -->
+        <section class="about-section reveal" aria-labelledby="education-title">
+          <header class="about-section__head">
+            <h2 class="about-section__title" id="education-title">Education</h2>
+            <p class="about-section__intro">Where I study and what I have studied before.</p>
+          </header>
+          <ol class="about-section__body timeline">
+            <li class="entry">
+              <p class="entry__when">Aug 2025 – present</p>
+              <div class="entry__details">
+                <h3 class="entry__title">UX Designer</h3>
+                <p class="entry__place">TUC Yrkeshögskola</p>
+                <p class="entry__desc">So far I have taken courses in interaction design, user-centred design and interfaces.</p>
+              </div>
+            </li>
+            <li class="entry">
+              <p class="entry__when">2020 – 2025</p>
+              <div class="entry__details">
+                <h3 class="entry__title">Courses at university</h3>
+                <p class="entry__place">Linköping University</p>
+                <p class="entry__desc">
+                  Digital media, electronic publishing, programming in C++, communication and user interfaces, and
+                  graphic technology.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section class="about-section reveal" aria-labelledby="skills-title">
+          <header class="about-section__head">
+            <h2 class="about-section__title" id="skills-title">Skills</h2>
+            <p class="about-section__intro">Tools I work in and methods I use in my projects.</p>
+          </header>
+          <div class="about-section__body skills">
+            <div class="skills__col">
+              <h3 class="skills__label">Tools</h3>
+              <ul>
+                <li>Figma</li>
+                <li>Canva</li>
+                <li>Adobe Photoshop</li>
+                <li>Visual Studio Code</li>
+                <li>Adobe Illustrator</li>
+              </ul>
+            </div>
+            <div class="skills__col">
+              <h3 class="skills__label">Methods</h3>
+              <ul>
+                <li>Inclusive design</li>
+                <li>User research</li>
+                <li>Personas</li>
+                <li>Wireframing</li>
+                <li>Prototyping</li>
+                <li>Usability testing</li>
+                <li>Accessibility (WCAG)</li>
+              </ul>
+            </div>
+            <div class="skills__col">
+              <h3 class="skills__label">Creative</h3>
+              <ul>
+                <li>Digital painting</li>
+                <li>Illustration</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ WORK EXPERIENCE ============ -->
+        <section class="about-section reveal" aria-labelledby="work-title">
+          <header class="about-section__head">
+            <h2 class="about-section__title" id="work-title">Work experience</h2>
+            <p class="about-section__intro">Jobs and assignments, most recent first.</p>
+          </header>
+          <ol class="about-section__body timeline">
+            <li class="entry">
+              <p class="entry__when">2019 – 2020</p>
+              <div class="entry__details">
+                <h3 class="entry__title">Sales associate</h3>
+                <p class="entry__place">Bergendahls AB, Linköping</p>
+                <p class="entry__desc">
+                  Worked at the checkout, the front store and with restocking. In summer 2020 I was also responsible for
+                  logistics, some returns and purchasing for one department.
+                </p>
+              </div>
+            </li>
+            <li class="entry">
+              <p class="entry__when">2019 – 2020</p>
+              <div class="entry__details">
+                <h3 class="entry__title">Childcare assistant</h3>
+                <p class="entry__place">T1-skolan, Linköping</p>
+                <p class="entry__desc">
+                  Substitute pupil assistant and childcare assistant for years F–3 – rewarding work as a present leader
+                  who keeps a dialogue going and offers support.
+                </p>
+              </div>
+            </li>
+            <li class="entry">
+              <p class="entry__when">2018 – 2019</p>
+              <div class="entry__details">
+                <h3 class="entry__title">Assembler</h3>
+                <p class="entry__place">BT, Mjölby</p>
+                <p class="entry__desc">
+                  Assembled truck components on a moving production line, which trained me in handling stress and
+                  assessing quality.
+                </p>
+              </div>
+            </li>
+            <li class="entry">
+              <p class="entry__when">2017</p>
+              <div class="entry__details">
+                <h3 class="entry__title">Train host</h3>
+                <p class="entry__place">SJ AB, Stockholm</p>
+                <p class="entry__desc">
+                  Checked tickets, kept order and comfort on board, and served food and drink with a high standard of
+                  service.
+                </p>
+              </div>
+            </li>
+            <li class="entry">
+              <p class="entry__when">2015 – 2016</p>
+              <div class="entry__details">
+                <h3 class="entry__title">Train host</h3>
+                <p class="entry__place">Östgötapendeln, Mjölby</p>
+                <p class="entry__desc">
+                  Handled varied customer needs and solved problems in real time, which developed my empathy and my
+                  understanding of different kinds of people.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
+          </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
