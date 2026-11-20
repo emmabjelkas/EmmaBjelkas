@@ -139,7 +139,7 @@
             <form
               class="contact-form"
               id="contact-form"
-              action="https://formsubmit.co/emma.bjelkas@hotmail.com"
+              action="https://api.web3forms.com/submit"
               method="POST"
               aria-labelledby="form-title"
             >
@@ -148,13 +148,13 @@
                 <p class="contact-form__sub">Fill in your details and I'll reply as soon as I can.</p>
               </div>
 
-              <!-- FormSubmit config (also used when JS is off) -->
-              <input type="hidden" name="_subject" value="New message from portfolio" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
+              <!-- Web3Forms config (also used when JS is off). The access key is public by design. -->
+              <input type="hidden" name="access_key" value="ad72ca71-20cc-4b7c-a1f6-b64c84145d8b" />
+              <input type="hidden" name="subject" value="New message from portfolio" />
+              <input type="hidden" name="from_name" value="Portfolio contact form" />
               <div class="hp" aria-hidden="true">
                 <label for="f-honey">Leave this field empty</label>
-                <input type="text" id="f-honey" name="_honey" tabindex="-1" autocomplete="off" />
+                <input type="text" id="f-honey" name="botcheck" tabindex="-1" autocomplete="off" />
               </div>
 
               <div class="contact-form__row">

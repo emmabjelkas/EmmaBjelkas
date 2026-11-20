@@ -1,11 +1,19 @@
 /* Emma Bjelkås – Contact form
-   Sends via FormSubmit's AJAX endpoint. Without JS the form posts
-   straight to https://formsubmit.co/<email> (action attribute). */
+   Sends via Web3Forms (https://web3forms.com) when WEB3FORMS_KEY is set,
+   otherwise via FormSubmit's AJAX endpoint. Without JS the form posts
+   straight to Web3Forms (action attribute + hidden access_key in contact.html). */
 (function () {
   "use strict";
 
   var EMAIL = "emma.bjelkas@hotmail.com";
-  var ENDPOINT = "https://formsubmit.co/ajax/" + EMAIL;
+
+  // Web3Forms access key – get one for free at https://web3forms.com (just enter
+  // your email, the key is mailed to you). The key is meant to be public, so it is
+  // fine to have it here. Leave it empty to keep using FormSubmit.
+  var WEB3FORMS_KEY = "ad72ca71-20cc-4b7c-a1f6-b64c84145d8b";
+
+  var USE_WEB3FORMS = !!WEB3FORMS_KEY;
+  var ENDPOINT = USE_WEB3FORMS ? "https://api.web3forms.com/submit" : "https://formsubmit.co/ajax/" + EMAIL;
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
   var form = document.getElementById("contact-form");
@@ -17,7 +25,7 @@
   var resetBtn = document.getElementById("form-reset");
   var submitBtn = form.querySelector('button[type="submit"]');
   var btnLabel = form.querySelector(".contact-form__btn-label");
-  var honey = form.querySelector('[name="_honey"]');
+  var honey = form.querySelector('[name="botcheck"]');
 
   // JS handles validation with inline messages instead of browser bubbles
   form.setAttribute("novalidate", "");
@@ -80,11 +88,18 @@
     status.textContent = on ? "Sending your message…" : "";
   }
 
-  function showError() {
+  // kind: "failed"  – the service clearly refused the message
+  //       "unknown" – no answer (slow service / dropped connection): the message
+  //                   has often still been delivered, so don't tell people it failed
+  function showError(kind) {
+    var mail = '<a href="mailto:' + EMAIL + '">' + EMAIL + "</a>";
     alertBox.innerHTML =
-      "<strong>Your message couldn't be sent.</strong>" +
-      "Please try again in a moment, or email me directly at " +
-      '<a href="mailto:' + EMAIL + '">' + EMAIL + "</a>.";
+      kind === "unknown"
+        ? "<strong>We couldn't confirm that your message was sent.</strong>" +
+          "The form service is slow right now, so it has most likely arrived anyway – please don't send it " +
+          "again straight away. If you haven't heard from me within a few days, email me at " + mail + "."
+        : "<strong>Your message couldn't be sent.</strong>" +
+          "Please try again in a moment, or email me directly at " + mail + ".";
     alertBox.hidden = false;
   }
 
@@ -121,38 +136,82 @@
       return;
     }
 
-    var payload = {
+    var fields = {
       name: name,
       email: email,
       phone: form.elements.phone.value.trim(),
       message: form.elements.message.value.trim(),
-      _subject: "New message from portfolio – " + name,
-      _template: "table",
-      _captcha: "false",
-      _honey: "",
-      _replyto: email,
     };
+    var subject = "New message from portfolio – " + name;
+    var payload = USE_WEB3FORMS
+      ? {
+          access_key: WEB3FORMS_KEY,
+          subject: subject,
+          from_name: "Portfolio contact form",
+          name: fields.name,
+          email: fields.email, // Web3Forms uses this as reply-to
+          phone: fields.phone,
+          message: fields.message,
+        }
+      : {
+          name: fields.name,
+          email: fields.email,
+          phone: fields.phone,
+          message: fields.message,
+          _subject: subject,
+          _template: "table",
+          _captcha: "false",
+          _honey: "",
+          _replyto: email,
+        };
 
     setSending(true);
+    // FormSubmit sometimes takes a long time to answer. Keep the visitor informed,
+    // and give up waiting after 30 s (the message is usually delivered anyway).
+    var slowTimer = setTimeout(function () {
+      btnLabel.textContent = "Still sending…";
+      status.textContent = "Still sending – this can take a little while.";
+    }, 6000);
+    var controller = window.AbortController ? new AbortController() : null;
+    var abortTimer = controller
+      ? setTimeout(function () {
+          controller.abort();
+        }, 30000)
+      : null;
+
     fetch(ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(payload),
+      signal: controller ? controller.signal : undefined,
     })
       .then(function (res) {
-        return Promise.resolve(res.json ? res.json() : {}).then(function (data) {
-          var ok = res.ok && data && String(data.success) === "true";
-          if (!ok) throw new Error((data && data.message) || "Request failed");
+        // Read text and parse it ourselves (FormSubmit sends JSON as text/html).
+        // Both services answer { success: true|"true" } or { success: false|"false" }.
+        return res.text().then(function (text) {
+          var data = null;
+          try {
+            data = JSON.parse(text);
+          } catch (err) {}
+          if (data && String(data.success) === "false") return "failed"; // explicit refusal (400, 429…)
+          if (res.ok) return "sent"; // 2xx: delivered, even if the body was odd
+          if (res.status >= 500) return "unknown"; // gateway timeout etc. – often delivered
+          return "failed";
         });
       })
-      .then(function () {
-        setSending(false);
-        form.reset();
-        showSuccess(email);
-      })
       .catch(function () {
+        return "unknown"; // network drop or our 30 s timeout
+      })
+      .then(function (result) {
+        clearTimeout(slowTimer);
+        clearTimeout(abortTimer);
         setSending(false);
-        showError(); // role="alert" announces it
+        if (result === "sent") {
+          form.reset();
+          showSuccess(email);
+        } else {
+          showError(result); // role="alert" announces it
+        }
       });
   });
 
