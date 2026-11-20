@@ -281,3 +281,36 @@
     line-height: 24px;
   }
 }
+
+/* ---------- CV download ---------- */
+.cv-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 8px;
+}
+.cv-cta__note {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gra-600);
+}
+@media (max-width: 900px) {
+  .cv-cta {
+    align-self: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}
+
+/* Link to a case study from a timeline entry (e.g. Refino) */
+.entry__place a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+.entry__place a:hover {
+  color: var(--rosa-aktiv);
+}

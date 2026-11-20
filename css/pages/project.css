@@ -745,10 +745,7 @@
     line-height: 34px;
   }
   .next-project__links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 32px;
+    gap: 16px;
   }
   .next-project__cover {
     flex: none;
