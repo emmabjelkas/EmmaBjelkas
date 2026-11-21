@@ -842,3 +842,22 @@
     line-height: 26px;
   }
 }
+
+/* Small note under the project intro (e.g. "Published with … approval") */
+.project-hero__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gra-600);
+}
+.project-hero__note .icon {
+  color: var(--oliv-aktiv);
+  stroke-width: 2;
+}
+@media (max-width: 900px) {
+  .project-hero__note {
+    order: 5;
+  }
+}
