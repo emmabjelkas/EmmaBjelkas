@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refino – Website &amp; Loan Application – Emma Bjelkås</title>
+    <meta
+      name="description"
+      content="Case study: a new design for Refino, a Swedish loan broker – from the start page and insurance pages to the loan application. Live on refino.se since 4 November 2026."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages/project.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ NAV ============ -->
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__logo" href="index.html">Emma Bjelkås</a>
+        <nav class="site-nav__links" aria-label="Main">
+          <div class="has-dropdown">
+            <a class="site-nav__link site-nav__link--projects" href="work.html" aria-current="true">Projects</a>
+            <button class="site-nav__chevron" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown" aria-label="Show project menu">
+              <svg class="icon icon--16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+            </button>
+            <div class="dropdown" id="projects-dropdown">
+              <a href="refino.html">Refino – Website &amp; Loan Application</a>
+              <a href="underbara.html">Underbara Unge – Redesign</a>
+              <a href="casestudy.html">Case Study – Stallbacken</a>
+              <a href="equestrian.html">Equestrian Management App</a>
+              <hr />
+              <a href="art.html">Graphic Art</a>
+              <a class="textlink textlink--pink" href="work.html">
+                All projects
+                <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <a class="site-nav__link" href="about.html">About</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <button class="mobile-menu__big mobile-menu__projects" aria-expanded="true" aria-controls="mobile-menu-projects">
+            Projects
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke-width="1.33" /></svg>
+          </button>
+          <div class="mobile-menu__sub" id="mobile-menu-projects">
+            <ul>
+              <li><a href="refino.html">Refino – Website &amp; Loan Application</a></li>
+              <li><a href="underbara.html">Underbara Unge – Redesign</a></li>
+              <li><a href="casestudy.html">Case Study – Stallbacken</a></li>
+              <li><a href="equestrian.html">Equestrian Management App</a></li>
+              <li><a href="art.html">Graphic Art</a></li>
+              <li>
+                <a class="textlink textlink--pink" href="work.html">
+                  All projects
+                  <svg class="icon icon--sm icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="mobile-menu__big" href="about.html">About</a></li>
+        <li><a class="mobile-menu__big" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main id="main">
+      <!-- ============ PROJEKTHUVUD ============ -->
+      <section class="project-hero">
+        <div class="container project-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Start</a><span aria-hidden="true">/</span><a href="work.html">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Refino – Website &amp; Loan Application</span></nav>
+          <h1 class="project-hero__title">Refino <br /><span class="nowrap">– Website &amp; Loan Application</span></h1>
+          <div class="project-hero__meta">
+            <p class="project-hero__tags">Website<span class="sep" aria-hidden="true">|</span>Internship<span class="sep" aria-hidden="true">|</span>UX/UI design<span class="sep" aria-hidden="true">|</span>Figma<span class="sep" aria-hidden="true">|</span>Team of 2</p>
+          </div>
+          <p class="project-hero__intro">
+            A new design for Refino, a Swedish loan broker – from the start page and insurance pages to the loan
+            application. The new design went live on refino.se on 4 November 2026.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ COVER ============ -->
+      <section class="project-cover project-cover--refino reveal">
+        <div class="container">
+          <div class="project-cover__frame">
+            <picture>
+              <source media="(max-width: 900px)" srcset="assets/img/refino/cover-mobile.png" />
+              <img src="assets/img/refino/cover.png" alt="Redesigned Refino start page with the headline “Everyone deserves a chance at a better economy” and a loan calculator" width="1437" height="949" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 The problem -->
+      <section class="p-section reveal" aria-labelledby="s-problem">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">01</p><h2 class="p-section__title" id="s-problem">The problem</h2></header>
+          <div class="p-section__content">
+            <p>
+              Refino's old pages were hard to use for many of the people who need them most. Long financial and legal
+              texts, weak structure and accessibility gaps made it hard to understand an offer – at a moment when users
+              are already stressed about money. At the same time, the pages needed to rank well in search.
+            </p>
+            <div class="steps steps--3">
+              <div class="step">
+                <p class="step__num">01</p>
+                <p class="step__title">Accessibility</p>
+                <p>Make every page and step usable for people with different abilities, devices and levels of experience.</p>
+              </div>
+              <div class="step">
+                <p class="step__num">02</p>
+                <p class="step__title">Cognitive load</p>
+                <p>Make long terms, insurance texts and financial words easy to scan and understand.</p>
+              </div>
+              <div class="step">
+                <p class="step__num">03</p>
+                <p class="step__title">SEO without losing usability</p>
+                <p>Keep the text search engines need, without letting it bury what users came for.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 The project -->
+      <section class="p-section reveal" aria-labelledby="s-project">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">02</p><h2 class="p-section__title" id="s-project">The project</h2></header>
+          <div class="p-section__content">
+            <p>
+              Refino helps people in Sweden compare and apply for private loans, and also offers loan protection and
+              insurance. The service handles money, credit checks and personal data, so every page needs to feel calm,
+              clear and trustworthy.
+            </p>
+            <p>
+              During my internship at Refino, another UX intern and I redesigned the main pages for desktop and mobile:
+              the start page, Loan protection, Security insurance, a glossary, terms of use, a document archive, a
+              complaints page and an accessibility statement – as well as the loan application. The redesign
+              launched on refino.se on 4 November 2026.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 The pages -->
+      <section class="p-section reveal" aria-labelledby="s-pages">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">03</p><h2 class="p-section__title" id="s-pages">The pages</h2></header>
+          <div class="p-section__content">
+            <p>
+              Many of the pages carry long legal and financial texts. I broke them into cards with numbered points, short
+              introductions and a table of contents, so users can find what they need without reading everything. The
+              full text stays on the page for search engines, but users can scan the structure instead of reading it all.
+            </p>
+            <figure class="shot shot--crop-m">
+              <img src="assets/img/refino/terms-page.png" alt="Refino terms of use page with a dark blue hero, numbered content cards and an “On this page” table of contents" width="1728" height="1017" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 The application -->
+      <section class="p-section reveal" aria-labelledby="s-application">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">04</p><h2 class="p-section__title" id="s-application">The application</h2></header>
+          <div class="p-section__content">
+            <p>
+              The loan application starts from the calculator on the start page. The user fills in their details (and an
+              optional co-applicant), identifies with BankID and chooses their bank, so that account data can be shared
+              through a third-party bank data service.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 Details -->
+      <section class="p-section reveal" aria-labelledby="s-details">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">05</p><h2 class="p-section__title" id="s-details">Details</h2></header>
+          <div class="p-section__content p-section__content--loose">
+            <h3 class="p-section__sub">1. A searchable glossary</h3>
+            <p>
+              Financial terms are collected in a glossary with search suggestions, a selected-term view and a clear empty
+              state when nothing matches.
+            </p>
+            <p>That way, words like effective interest rate don’t stand in the way of understanding an offer.</p>
+            <h3 class="p-section__sub">2. Readable legal pages</h3>
+            <p>
+              Terms of use, complaints and the document archive use cards, numbered points, a table of contents and clear
+              links, so long legal text becomes easier to scan.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stat -->
+      <section class="p-stat reveal">
+        <div class="container p-stat__inner">
+          <div class="p-stat__box">
+            <p class="p-stat__big">3 steps</p>
+            <p class="p-stat__text">From personal details to BankID and bank data – a short, guided application.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 The design -->
+      <section class="p-section p-section--flush reveal" aria-labelledby="s-design">
+        <div class="container p-section__inner">
+          <header class="p-section__head"><p class="p-section__num">06</p><h2 class="p-section__title" id="s-design">The design</h2></header>
+          <div class="p-section__content">
+            <p>
+              The new design, live on refino.se since 4 November 2026, covers desktop and mobile with the same header,
+              footer, icons and form components across every page.
+            </p>
+            <figure class="shot">
+              <img src="assets/img/refino/mockup-desktop-mobile.png" alt="Refino Loan protection page shown side by side on desktop and on a mobile phone" width="1904" height="1280" loading="lazy" />
+              <span class="shot__phone" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NEXT PROJECT ============ -->
+      <section class="next-project reveal" aria-labelledby="next-title">
+        <div class="container next-project__inner">
+          <div class="next-project__row">
+            <div class="next-project__text">
+              <p class="next-project__label">Next project</p>
+              <h2 class="next-project__title" id="next-title">Underbara Unge – Redesign</h2>
+              <div class="next-project__links">
+                <a class="textlink" href="underbara.html">View project <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg></a>
+                <a class="textlink textlink--grey" href="work.html"><svg class="icon icon--left" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.67 8H3.33M7.33 3.33L3.33 8L7.33 12.67" /></svg> All projects</a>
+              </div>
+            </div>
+            <a class="next-project__cover" href="underbara.html" tabindex="-1" aria-hidden="true">
+              <div class="cover next-cover--underbara">
+                <div class="cover__layer nu-logo"><img src="assets/img/underbara-logo.png" alt="" loading="lazy" /></div>
+                <div class="cover__layer cover__layer--a nu-1"><img src="assets/img/underbara-mockup-1.png" alt="" loading="lazy" /></div>
+                <div class="cover__layer cover__layer--b nu-2"><img src="assets/img/underbara-mockup-2.png" alt="" loading="lazy" /></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <p class="footer-cta__title">Let's work together</p>
+          <div class="boil footer-sprig" aria-hidden="true">
+            <img src="assets/deco/sprig-1.svg" alt="" /><img src="assets/deco/sprig-2.svg" alt="" /><img src="assets/deco/sprig-3.svg" alt="" />
+          </div>
+          <a class="btn btn--pink" href="contact.html">
+            Get in touch
+            <svg class="icon icon--right" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.75 9H14.25M9.75 13.5L14.25 9L9.75 4.5" /></svg>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> Emma Bjelkås</p>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="work.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
