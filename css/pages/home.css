@@ -107,10 +107,25 @@
   padding-top: 120px;
   padding-bottom: 120px;
 }
+/* Title left, intro right on the same row (like the page headers) */
 .work__header {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+}
+.work__header .page-header__intro {
+  padding-bottom: 8px;
+}
+@media (max-width: 900px) {
+  .work__header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .work__header .page-header__intro {
+    padding-bottom: 0;
+  }
 }
 .work__intro {
   max-width: 617px;
